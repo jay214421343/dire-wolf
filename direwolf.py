@@ -4,8 +4,9 @@ from discord.ext.commands import Bot
 from discord.ext import commands
 import platform
 import random
+import itemlookup
 
-client = Bot(description="Dire Wolf by Marcus#3244", command_prefix="!", pm_help = False)
+client = Bot(description="Dire Wolf by Marcus#3244", command_prefix=";", pm_help = False)
 
 @client.event
 async def on_ready():
@@ -19,7 +20,7 @@ async def on_ready():
 	print('Support Discord Server: https://discord.gg/FNNNgqb')
 	print('Github Link: https://github.com/Habchy/BasicBot')
 	print('--------')
-	print('You are running Dire Wolf v1')
+	print('You are running Dire Wolf v1.0.1')
 	print('Created by Marcus#3244')
 	return await client.change_presence(game=discord.Game(name='Dungeon World'))
 
