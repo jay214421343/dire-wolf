@@ -21,7 +21,7 @@ async def on_ready():
 	print('https://discordapp.com/oauth2/authorize?client_id={}&scope=bot&permissions=8'.format(client.user.id))
 	print('--------')
 	print('Support Discord Server: https://discord.gg/FNNNgqb')
-	print('Github Link: https://github.com/Habchy/BasicBot')
+	print('Github Link: https://github.com/Marc5567/dire-wolf')
 	print('--------')
 	print('You are running Dire Wolf v1.0.1')
 	print('Created by Marcus#3244')
