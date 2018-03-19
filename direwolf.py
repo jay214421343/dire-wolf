@@ -7,7 +7,7 @@ from discord.ext import commands
 from discord.ext.commands import CommandInvokeError
 import platform
 import random
-import funcs
+from funcs import *
 
 client = Bot(description="Dire Wolf by Marcus#3244", command_prefix=";", pm_help = False)
 
@@ -107,8 +107,8 @@ async def update_sources():
 
 @client.command(pass_context=True)
 async def item(ctx, *, name):
-    """Looks up a Dungeon World item."""
-    result = funcs.search(items, 'name', name)
+    #Looks up a Dungeon World item.
+    result = search(items, 'name', name)
     if result is None:
         return await client.say('Item not found.')
     strict = result[1]
@@ -121,14 +121,15 @@ async def item(ctx, *, name):
             result = results[0]
         else:
             result = await get_selection(ctx, [(r['name'], r) for r in results])
-            if result is None: return await client.say('Selection timed out or was cancelled.')
+            if result is None: return await bot.say('Selection timed out or was cancelled.')
 
     embed = EmbedWithAuthor(ctx)
     embed.title = result['name']
-    meta = result['meta']
-    meta2 = [meta[i:i + 1024] for i in range(2048, len(meta), 1024)]
-    embed.description = meta[0:2048]
-    for piece in meta2:
+    embed.description = result['meta']
+    desc = result['desc']
+    desc = [desc[i:i + 1024] for i in range(0, len(desc), 1024)]
+    embed.add_field(name="Description", value=desc[0])
+    for piece in desc[1:]:
         embed.add_field(name="\u200b", value=piece)
 
     await client.say(embed=embed)
