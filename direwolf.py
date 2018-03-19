@@ -55,7 +55,7 @@ async def hack(*args):
 	embed.set_footer(text="Basic Move, 58")
 	await client.say(embed=embed)
 
-UPDATE_DELAY = 60 * 30  # update every 30 minutes
+UPDATE_DELAY = 60  # update every minute
 
 ITEM_SOURCE = "https://raw.githubusercontent.com/Marc5567/dire-wolf/master/items.txt"
 ITEM_DIVIDER = "***"  # a string that divides distinct items.
@@ -94,9 +94,9 @@ async def update_sources():
 
             for item in raw_items:
                 lines = item.split('\n')
-                name = lines[0].strip('# ')
-                meta = '\n'.join(lines[1:1 + META_LINES])
-                desc = '\n'.join(lines[2 + META_LINES:])
+                name = lines[0].strip('## ')
+                meta = '\n'.join(lines[1::])
+                desc = '\n'.join(lines)
 
                 for dup in [i for i in items if name.lower() == i['name'].lower()]:
                     items.remove(dup)  # remove duplicates
@@ -125,11 +125,10 @@ async def item(ctx, *, name):
 
     embed = EmbedWithAuthor(ctx)
     embed.title = result['name']
-    embed.description = result['meta']
-    desc = result['desc']
-    desc = [desc[i:i + 1024] for i in range(0, len(desc), 1024)]
-    embed.add_field(name="Description", value=desc[0])
-    for piece in desc[1:]:
+    meta = result['meta']
+    meta2 = [meta[i:i + 1024] for i in range(2048, len(meta), 1024)]
+    embed.description = meta[0:2048]
+    for piece in meta2:
         embed.add_field(name="\u200b", value=piece)
 
     await client.say(embed=embed)
