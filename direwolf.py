@@ -13,19 +13,20 @@ client = Bot(description="Dire Wolf by Marcus#3244", command_prefix=";", pm_help
 
 @client.event
 async def on_ready():
-	print('Logged in as '+client.user.name+' (ID:'+client.user.id+') | Connected to '+str(len(client.servers))+' servers | Connected to '+str(len(set(client.get_all_members())))+' users')
-	print('--------')
-	print('Current Discord.py Version: {} | Current Python Version: {}'.format(discord.__version__, platform.python_version()))
-	print('--------')
-	print('Use this link to invite {}:'.format(client.user.name))
-	print('https://discordapp.com/oauth2/authorize?client_id={}&scope=bot&permissions=8'.format(client.user.id))
-	print('--------')
-	print('Support Discord Server: https://discord.gg/FNNNgqb')
-	print('Github Link: https://github.com/Marc5567/dire-wolf')
-	print('--------')
-	print('You are running Dire Wolf v1.0.1')
-	print('Created by Marcus#3244')
-	return await client.change_presence(game=discord.Game(name='Dungeon World'))
+    print('Logged in as '+client.user.name+' (ID:'+client.user.id+') | Connected to '+str(len(client.servers))+' servers | Connected to '+str(len(set(client.get_all_members())))+' users')
+    print('--------')
+    print('Current Discord.py Version: {} | Current Python Version: {}'.format(discord.__version__, platform.python_version()))
+    print('--------')
+    print('https://discordapp.com/oauth2/authorize?client_id={}&scope=bot&permissions=8'.format(client.user.id))
+    print('--------')
+    print('Support Discord Server: https://discord.gg/FNNNgqb')
+    print('Github Link: https://github.com/Marc5567/dire-wolf')
+    print('--------')
+    print('You are running Dire Wolf v1.0.1')
+    print('Created by Marcus#3244')
+    print('--------')
+    client.loop.create_task(update_sources_loop())
+    return await client.change_presence(game=discord.Game(name='Dungeon World'))
 
 @client.command()
 async def ping(*args):
@@ -55,7 +56,7 @@ async def hack(*args):
 	embed.set_footer(text="Basic Move, 58")
 	await client.say(embed=embed)
 
-UPDATE_DELAY = 60  # update every minute
+UPDATE_DELAY = 60 * 60  # update every hour
 
 ITEM_SOURCE = "https://raw.githubusercontent.com/Marc5567/dire-wolf/master/items.txt"
 ITEM_DIVIDER = "***"  # a string that divides distinct items.
