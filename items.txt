@@ -1,3 +1,118 @@
+### Item Categories
+Weapons
+Armor
+Dungeon Gear
+Poisons
+Miscellaneous
+Magic Items
+
+***
+
+### Weapons
+Ragged Bow
+Fine Bow
+Hunter’s Bow
+Crossbow
+Bundle of Arrows
+Elven Arrows
+Club, Shillelagh
+Staff
+Dagger, Shiv, Knife
+Throwing Dagger
+Short Sword, Axe, Warhammer, Mace
+Spear
+Long Sword, Battle Axe, Flail
+Halberd
+Rapier
+Dueling Rapier
+
+***
+
+### Armor
+Leather, Chainmail
+Scale Mail
+Plate
+Shield
+
+***
+
+### Dungeon Gear
+Bandages
+Poultices and Herbs
+Healing Potion
+Keg of Dwarven Stout
+Bag of Books
+Antitoxin
+Dungeon Rations
+Personal Feast
+Dwarven Hardtack
+Elven Bread
+Halfling Pipeleaf
+
+***
+
+### Poisons
+Oil of Tagit
+Bloodweed
+Goldenroot
+Serpent's Tears
+
+***
+
+### Miscellaneous
+Services
+Meals
+Transport
+Land and Buildings
+Bribes
+Gifts and Finery
+Hoards
+
+***
+
+### Magic Items
+Argo-Thaan, Holy Avenger
+Arrows of Acheron
+Axe of the Conqueror-King
+Barb of the Black Gate
+Bag of Holding
+The Burning Wheel
+Captain Bligh’s Cornucopia
+The Carcosan Spire
+Cloak of Silent Stars
+Coin of Remembering
+Common Scroll
+Devilsbane Oil
+Earworm Wax
+The Echo
+The Epoch Lens
+Farsight Stone
+The Fiasco Codex 
+Flask of Breath 
+Folly Held Aloft, The Wax Wings, A Huge Mistake
+Immovable Rod
+Infinite Book
+Inspectacles
+The Ku’meh Maneuver
+Lamented Memento
+Lodestone Shield
+Map of the Last Patrol
+Ned’s Head
+Nightsider’s Key
+Sacred Herbs
+The Sartar Duck
+Tears of Annalise
+Teleportation Room
+Timunn’s Armor
+Titus’ Truthful Tallow
+Tricksy Rope
+The Sterling Hand
+Vellius’s Gauntlets
+Violation Glaive
+Vorpal Sword
+
+***
+
 ### Ragged Bow
 *near, 15 coins, 2 weight*
 
