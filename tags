@@ -1,3 +1,47 @@
+### Item Tags
+n Ammo
+Forceful
++n Damage
+Ignores Armor
+Messy
+n Piercing
+Precise
+Reload
+Stun
+Thrown
+n Armor
++n Armor
+Clumsy
+Hand
+Close
+Reach
+Near
+Far
+Applied
+Awkard
++Bonus
+Dangerous
+***
+### Monster Tags
+Magical
+Devious
+Amorphous
+Organized
+Intelligent
+Hoarder
+Stealthy
+Terrifying
+Catious
+Construct
+Planar
+Horde
+Group
+Solitary
+Tiny
+Small
+Large
+Huge
+***
 ### n Ammo
 It counts as ammunition for appropriate ranged weapons. The number indicated does not represent individual arrows or sling stones, but represents what you have left on hand.
 ***
@@ -63,3 +107,57 @@ It modifies your effectiveness in a specified situation. It might be “+1 forwa
 ***
 ### Dangerous
 It’s easy to get in trouble with it. If you interact with it without proper precautions the GM may freely invoke the consequences of your foolish actions.
+***
+### Magical
+It is by nature magical through and through. 
+***
+### Devious
+Its main danger lies beyond the simple clash of battle. 
+***
+### Amorphous
+Its anatomy and organs are bizarre and unnatural. 
+***
+### Organized
+It has a group structure that aids it in survival. Defeating one may cause the wrath of others. One may sound an alarm. 
+***
+### Intelligent
+It’s smart enough that some individuals pick up other skills. The GM can adapt the monster by adding tags to reflect specific training, like a mage or warrior. 
+***
+### Hoarder
+It almost certainly has treasure. 
+***
+### Stealthy
+It can avoid detection and prefers to attack with the element of surprise. 
+***
+### Terrifying
+Its presence and appearance evoke fear. 
+***
+### Cautious
+It prizes survival over aggression. 
+***
+### Construct 
+It was made, not born 
+***
+### Planar 
+It’s from beyond this world
+***
+### Horde 
+Where there’s one, there’s more. A lot more. 
+***
+### Group 
+Usually seen in small numbers, 3–6 or so. 
+***
+### Solitary 
+It lives and fights alone.
+***
+### Tiny 
+It’s much smaller than a halfling. 
+***
+### Small 
+It’s about halfling size. 
+***
+### Large 
+It’s much bigger than a human, about as big as a cart. 
+***
+### Huge 
+It’s as big as a small house or larger.
