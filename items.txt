@@ -339,8 +339,8 @@ A bag of holding is larger on the inside than the outside, it can contain an inf
 When you try to retrieve an item from a bag of holding, roll+WIS.
    •On a 10+, it's right there.
    •On a 7-9, choose one:
-      •You get the exact item, but it takes a while
-      •You get a similar item of the GM's choice, but it only takes a moment
+         •You get the exact item, but it takes a while
+         •You get a similar item of the GM's choice, but it only takes a moment
 
 No matter how many items it contains, a bag of holding is always 0 weight*.
 
@@ -353,8 +353,8 @@ An ancient wooden wheel, as might appear on a war-wagon, banded with steel. On a
 
 When you hold The Burning Wheel and speak a god's name, roll+CON.
    •On a 7+, the god you name takes notice and grants you an audience. An audience with a god is not without a price:
-      •On a 10+, you choose one of your stats and reduce it to the next lowest modifier (for example, a 14 is +1, so it would be reduced to 12, a +0).
-      •On a 7-9, the GM chooses which stat to reduce.
+         •On a 10+, you choose one of your stats and reduce it to the next lowest modifier (for example, a 14 is +1, so it would be reduced to 12, a +0).
+         •On a 7-9, the GM chooses which stat to reduce.
 
 Once used, the Burning Wheel ignites and burns with brilliant light. It does not confer any protection from those flames, nor does it provide any bonus to swimming.
 
@@ -444,9 +444,9 @@ A thick tome, said to be penned in the blood of poor fools and robber-barons by 
 When you read from the Fiasco Codex, Roll+WIS.
    •On a 10+, ask two of the questions below.
    •On a 7-9, ask one.
-      •What is my greatest opportunity, right now?
-      •Who can I betray to gain an advantage?
-      •Who is an ally I should not trust?
+         •What is my greatest opportunity, right now?
+         •Who can I betray to gain an advantage?
+         •Who is an ally I should not trust?
 
 The codex gives up its answers only once to each reader and takes 2 to 3 hours to read.
 
