@@ -1,3 +1,15 @@
+### List of Available Playbooks
+Barbarian
+Bard
+Cleric
+Druid
+Fighter
+Immolator
+Paladin
+Ranger
+Thief
+Wizard
+***
 ### Barbarian
 $Your maximum HP is 8+Constitution.
 Your base damage is d10.
