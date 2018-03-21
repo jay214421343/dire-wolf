@@ -17,16 +17,18 @@ async def on_ready():
     print('--------')
     print('Current Discord.py Version: {} | Current Python Version: {}'.format(discord.__version__, platform.python_version()))
     print('--------')
-    print('https://discordapp.com/oauth2/authorize?client_id={}&scope=bot&permissions=8'.format(client.user.id))
+    print('Add me to your server: https://discordapp.com/api/oauth2/authorize?client_id=425813218959556610&permissions=0&redirect_uri=https%3A%2F%2Finvite.direwolf.io%2F&scope=bot'.format(client.user.id))
     print('--------')
-    print('Support Discord Server: https://discord.gg/q9bmCZJ')
+    print('Support Discord Server: https://discord.gg/D6DenCC')
     print('Github Link: https://github.com/Marc5567/dire-wolf')
     print('--------')
-    print('You are running Dire Wolf v1.0.2')
+    print('You are running Dire Wolf v1.0.3')
     print('Created by Marcus#3244')
     print('--------')
     client.loop.create_task(update_sources_loop()) # creates update loop for data sources
     return await client.change_presence(game=discord.Game(name='Dungeon World'))
+
+client.remove_command('help')
 
 @client.command()
 async def hack(*args):
@@ -58,6 +60,7 @@ ITEM_SOURCE = "https://raw.githubusercontent.com/Marc5567/dire-wolf/master/items
 MONSTER_SOURCE = "https://raw.githubusercontent.com/Marc5567/dire-wolf/master/monsters"
 SPELL_SOURCE = "https://raw.githubusercontent.com/Marc5567/dire-wolf/master/spells"
 TAG_SOURCE = "https://raw.githubusercontent.com/Marc5567/dire-wolf/master/tags"
+PLAYBOOK_SOURCE = "https://raw.githubusercontent.com/Marc5567/dire-wolf/master/Playbooks"
 ITEM_DIVIDER = "***"  # a string that divides distinct items.
 META_LINES = 0  # the number of lines of meta info each item has
 
@@ -65,6 +68,7 @@ items = []
 monsters = []
 spells = []
 tags = []
+playbooks = []
 
 @client.event
 async def on_command_error(error, ctx):
@@ -157,6 +161,28 @@ async def update_sources():
                 tags.append({'name': name, 'meta': meta, 'desc': desc})
 
             print("Updated tags!")
+    #playbook indexing
+    async with aiohttp.ClientSession() as session:
+        async with session.get(PLAYBOOK_SOURCE) as resp:
+            text = await resp.text()
+            if 399 < resp.status < 600:  # 4xx, 5xx errors
+                raise Exception(f"Failed to update playbooks: {text}")
+
+            raw_playbooks = [t.strip() for t in text.split(ITEM_DIVIDER)]  # filter out index
+
+            for playbook in raw_playbooks:
+                lines = playbook.split('\n')
+                name = lines[0].strip('### ')
+                category = playbook.split('$')
+                stats = category[0].strip('$')
+                align = category[1].strip('$')
+                race = category[2].strip('$')
+                gear = category[3].strip('$')
+                moves = category[4].strip('$')
+
+                playbooks.append({'name': name, 'stats': stats, 'align': align, 'race': race, 'gear': gear, 'moves': moves})
+                print(stats)
+            print("Updated playbooks!")
 
 @client.command(pass_context=True)
 async def item(ctx, *, name=''):
@@ -235,7 +261,7 @@ async def spell(ctx, *, name=''):
 
 @client.command(pass_context=True)
 async def tag(ctx, *, name=''):
-    """Looks up a Dungeon World item tag.\nSearch \"Item Tags\" or \"Monster Tags\" to view respective lists.""""
+    """Looks up a Dungeon World item tag.\nSearch \"Item Tags\" or \"Monster Tags\" to view respective lists."""
     result = search(tags, 'name', name)
     if result is None:
         return await client.say('Tag not found.')
@@ -256,6 +282,75 @@ async def tag(ctx, *, name=''):
     embed.description = meta[0:2048]
     for piece in meta2:
         embed.add_field(name="\u200b", value=piece)
+    await client.say(embed=embed)
+
+@client.command(pass_context=True)
+async def playbook(ctx, *, name=''):
+    """Looks up a core Dungeon World playbook.\nSearch \"list\" a list of available playbooks."""
+    result = search(playbooks, 'name', name)
+    if result is None:
+        return await client.say('Playbook not found.')
+    strict = result[1]
+    results = result[0]
+    if strict:
+        result = results
+    else:
+        if len(results) == 1:
+            result = results[0]
+        else:
+            result = await get_selection(ctx, [(r['name'], r) for r in results])
+            if result is None: return await client.say('Selection timed out or was cancelled.')
+    embed = EmbedWithAuthor(ctx)
+    embed.title = result['name']
+    stats = result['stats']
+    align = result['align']
+    race = result['race']
+    gear = result['gear']
+    moves = result['moves']
+    embed.description = stats
+    embed.add_field(name="Alignment", value=align)
+    embed.add_field(name="Race", value=race)
+    embed.add_field(name="Gear", value=gear)
+    embed.add_field(name="Moves", value=moves)
+    await client.say(embed=embed)
+
+@client.group(pass_context=True)
+async def help(ctx):
+    if ctx.invoked_subcommand is None:
+        embed = EmbedWithAuthor(ctx)
+        embed.title = ""
+        embed.description = "Dire Wolf, a Dungeon World utility bot created by Marcus#3244\nJoin the official support and testing server [here](https://discord.gg/D6DenCC)\nInvite Dire Wolf to your server [here](https://discordapp.com/api/oauth2/authorize?client_id=425813218959556610&permissions=0&redirect_uri=https%3A%2F%2Finvite.direwolf.io%2F&scope=bot)"
+        embed.add_field(name="Help", value="**help** - Shows this message", inline=False)
+        embed.add_field(name="Lookup", value="**monster** - Looks up a monster\n**spell** - Looks up a spell\n**item** - Looks up an item\n**tag** - Looks up tags", inline=False)
+        embed.add_field(name="More Help", value="Type `;help command` for more info on a command.", inline=False)
+        await client.say(embed=embed)
+
+@help.command(pass_context=True)
+async def monster(ctx):
+    embed = EmbedWithAuthor(ctx)
+    embed.title = ";monster <name>"
+    embed.description = "Looks up a Dungeon World monster.\nSearch with environment name for list of monsters found in that environment.\n\"Environment List\" for a list of available environments."
+    await client.say(embed=embed)
+
+@help.command(pass_context=True)
+async def spell(ctx):
+    embed = EmbedWithAuthor(ctx)
+    embed.title = ";spell <name>"
+    embed.description = "Looks up a Dungeon World spell.\nSearch \"Wizard\" or \"Cleric\" for class spell lists."
+    await client.say(embed=embed)
+
+@help.command(pass_context=True)
+async def item(ctx):
+    embed = EmbedWithAuthor(ctx)
+    embed.title = ";item <name>"
+    embed.description = "Looks up a Dungeon World item.\nLists by category available by searching \"Weapons\", \"Armor\", etc.\nFull list of categories can be viewed by searching \"Item Categories\"."
+    await client.say(embed=embed)
+
+@help.command(pass_context=True)
+async def tag(ctx):
+    embed = EmbedWithAuthor(ctx)
+    embed.title = ";tag <name>"
+    embed.description = "Looks up a Dungeon World item tag.\nSearch \"Item Tags\" or \"Monster Tags\" to view respective lists."
     await client.say(embed=embed)
 
 client.run('TOKEN')
