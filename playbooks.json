@@ -122,15 +122,6 @@
       ""
     ],
     "gear": [
-      "Spur others to significant and unplanned decisive action.",
-      "Elf",
-      "When you enter an important location (your call) you can ask the GM for one fact from the history of that location.",
-      "Human",
-      "When you first enter a civilized settlement someone who respects the custom of hospitality to minstrels will take you in as their guest.",
-      "Arcane Art",
-      "Bardic Lore",
-      "Charming and Open",
-      "A Port in the Storm",
       "Your load is 9+Str. You have dungeon rations (5 uses, 1 weight). Choose one instrument, all are 0 weight for you:",
       "\ufffd Your father's mandolin, repaired",
       "\ufffd A fine lute, a gift from a noble",
@@ -210,16 +201,6 @@
       ""
     ],
     "gear": [
-      "Harm another to prove the superiority of your church or god.",
-      "Dwarf",
-      "You are one with stone. When you commune you are also granted a special version of Words of the Unspeaking as a rote which only works on stone.",
-      "Human",
-      "Your faith is diverse. Choose one wizard spell. You can cast and be granted that spell as if it was a cleric spell.",
-      "Deity",
-      "Divine Guidance",
-      "Turn Undead",
-      "Commune",
-      "Cast a Spell",
       "Your load is 10+Str. You carry dungeon rations (5 uses, 1 weight) and some symbol of the divine, describe it (0 weight). Choose your defenses:",
       "\ufffd Chainmail (1 armor, 1 weight)",
       "\ufffd Shield (+1 armor, 2 weight)",
@@ -276,8 +257,6 @@
       "Help something or someone grow.",
       "Neutral",
       "Eliminate an unnatural menace.",
-      "Elf",
-      "The sap of the elder trees flows within you. In addition to any other attunements, the Great Forest is always considered your land."
     ],
     "advanced": [
       "6-10 Moves",
@@ -293,13 +272,6 @@
       ""
     ],
     "gear": [
-      "Eliminate an unnatural menace.",
-      "Elf",
-      "The sap of the elder trees flows within you. In addition to any other attunements, the Great Forest is always considered your land.",
-      "Human",
-      "As your people learned to bind animals to field and farm, so too are you bound to them. You may always take the shape of any domesticated animal, in addition to your normal options.",
-      "Halfling",
-      "You sing the healing songs of spring and brook. When you make camp, you and your allies heal +1d6.",
       "Your load is 6+Str. You carry some token of your land, describe it. Choose your defenses:",
       "\ufffd Hide armor (1 armor, 1 weight)",
       "\ufffd Wooden shield (+1 armor, 1 weight)",
@@ -358,10 +330,6 @@
       "Defeat a worthy opponent.",
       "Evil",
       "Kill a defenseless or surrendered enemy.",
-      "Dwarf",
-      "When you share a drink with someone, you may parley with them using CON instead of CHA.",
-      "Elf",
-      "Choose one weapon - you can always treat weapons of that type as if they had the precise tag."
     ],
     "advanced": [
       "6-10 Moves",
@@ -377,15 +345,6 @@
       ""
     ],
     "gear": [
-      "Kill a defenseless or surrendered enemy.",
-      "Dwarf",
-      "When you share a drink with someone, you may parley with them using CON instead of CHA.",
-      "Elf",
-      "Choose one weapon - you can always treat weapons of that type as if they had the precise tag.",
-      "Halfling",
-      "When you defy danger and use your small size to your advantage, take +1.",
-      "Human",
-      "Once per battle you may reroll a single damage roll (yours or someone else's).",
       "Your load is 12+Str. You carry your signature weapon and dungeon rations (5 uses, 1 weight). Choose your defenses:",
       "\ufffd Chainmail (1 armor, 1 weight) and adventuring gear (1 weight)",
       "\ufffd Scale armor (2 armor, 3 weight)",
