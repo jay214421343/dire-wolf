@@ -3,6 +3,7 @@
     "race": [
       "**Outsider**",
       "You may be elf, dwarf, halfling, or human, but you and your people are not from around here. At the beginning of each session, the GM will ask you something about your homeland, why you left, or what you left behind. If you answer them, mark XP."
+      "",
     ],
     "master": [
       "2-5 Moves",
@@ -36,6 +37,7 @@
       "You eschew a convention of the civilized world.",
       "**Neutral**",
       "Teach someone the ways of your people."
+      "",
     ],
     "advanced": [
       "6-10 Moves",
@@ -57,6 +59,7 @@
       "Choose one:",
       "• Adventuring gear (1 weight) and dungeon rations (5 uses, 1 weight)",
       "• Chainmail (1 armor, 1 weight)"
+      "",
     ]
   },
   "1": {
