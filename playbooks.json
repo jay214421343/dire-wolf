@@ -463,6 +463,10 @@
       ""
     ],
     "gear": [
+      "Your load is 12+Str. You start with dungeon rations (5 uses, 1 weight), scale armor (2 armor, 3 weight), and some mark of faith, describe it (0 weight). Choose your weapon",
+      "&bull; Halberd (reach, +1 damage, two-handed, 2 weight)",
+      "&bull; Long sword (close, +1 damage, 1 weight) and shield (+1 armor, 2 weight)",
+      "",
       "Choose one:",
       "&bull; Adventuring gear (1 weight)",
       "&bull; Dungeon rations (1 weight) and healing potion (0 weight)"
