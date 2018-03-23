@@ -19,7 +19,7 @@
       "Eye for Weakness",
       "On the Move",
       "A Good Day to Die",
-      "Kill \ufffdem All",
+      "Kill 'em All",
       "War Cry",
       "Mark of Might",
       "More! Always More!",
@@ -48,7 +48,7 @@
     "advanced": [
       "6-10 Moves",
       "A Good Day to Die",
-      "Kill \ufffdem All",
+      "Kill 'em All",
       "War Cry",
       "Mark of Might",
       "More! Always More!",
@@ -59,12 +59,12 @@
     ],
     "gear": [
       "Your Load is 8+Str. You carry dungeon rations (5 uses, 1 weight), a dagger (hand, 1 weight) some token of where you've traveled or where you're from, and your choice of weapon:",
-      "\ufffd Axe (close, 1 weight)",
-      "\ufffd Two handed sword (close, +1 damage, 2 weight)",
+      "&bull; Axe (close, 1 weight)",
+      "&bull; Two handed sword (close, +1 damage, 2 weight)",
       "",
       "Choose one:",
-      "\ufffd Adventuring gear (1 weight) and dungeon rations (5 uses, 1 weight)",
-      "\ufffd Chainmail (1 armor, 1 weight)"
+      "&bull; Adventuring gear (1 weight) and dungeon rations (5 uses, 1 weight)",
+      "&bull; Chainmail (1 armor, 1 weight)"
     ]
   },
   "1": {
@@ -82,7 +82,7 @@
       "Metal Hurlant",
       "A Little Help From My Friends",
       "Eldritch Tones",
-      "Duelist\ufffds Parry",
+      "Duelist's Parry",
       "Bamboozle",
       "Multiclass Dabbler",
       "Multiclass Initiate",
@@ -116,33 +116,33 @@
       "Eldritch Chord",
       "An Ear For Magic",
       "Devious",
-      "Duelist\ufffds Block",
+      "Duelist's Block",
       "Con",
       "Multiclass Master",
       ""
     ],
     "gear": [
       "Your load is 9+Str. You have dungeon rations (5 uses, 1 weight). Choose one instrument, all are 0 weight for you:",
-      "\ufffd Your father's mandolin, repaired",
-      "\ufffd A fine lute, a gift from a noble",
-      "\ufffd The pipes with which you courted your first love",
-      "\ufffd A stolen horn",
-      "\ufffd A fiddle, never before played",
-      "\ufffd A songbook in a forgotten tongue",
+      "&bull; Your father's mandolin, repaired",
+      "&bull; A fine lute, a gift from a noble",
+      "&bull; The pipes with which you courted your first love",
+      "&bull; A stolen horn",
+      "&bull; A fiddle, never before played",
+      "&bull; A songbook in a forgotten tongue",
       "",
       "Choose your clothing:",
-      "\ufffd Leather armor (1 armor, 1 weight)",
-      "\ufffd Ostentatious clothes (0 weight)",
+      "&bull; Leather armor (1 armor, 1 weight)",
+      "&bull; Ostentatious clothes (0 weight)",
       "",
       "Choose your armament:",
-      "\ufffd Dueling rapier (close, precise, 2 weight)",
-      "\ufffd Worn bow (near, 2 weight), bundle of arrows (3 ammo, 1 weight), and short sword (close, 1 weight)",
+      "&bull; Dueling rapier (close, precise, 2 weight)",
+      "&bull; Worn bow (near, 2 weight), bundle of arrows (3 ammo, 1 weight), and short sword (close, 1 weight)",
       "",
       "Choose one:",
-      "\ufffd Adventuring gear (1 weight)",
-      "\ufffd Bandages (0 weight)",
-      "\ufffd Halfling pipeleaf (0 weight)",
-      "\ufffd 3 coins"
+      "&bull; Adventuring gear (1 weight)",
+      "&bull; Bandages (0 weight)",
+      "&bull; Halfling pipeleaf (0 weight)",
+      "&bull; 3 coins"
     ]
   },
   "2": {
@@ -202,17 +202,17 @@
     ],
     "gear": [
       "Your load is 10+Str. You carry dungeon rations (5 uses, 1 weight) and some symbol of the divine, describe it (0 weight). Choose your defenses:",
-      "\ufffd Chainmail (1 armor, 1 weight)",
-      "\ufffd Shield (+1 armor, 2 weight)",
+      "&bull; Chainmail (1 armor, 1 weight)",
+      "&bull; Shield (+1 armor, 2 weight)",
       "",
       "Choose your armament:",
-      "\ufffd Warhammer (close, 1 weight)",
-      "\ufffd Mace (close, 1 weight)",
-      "\ufffd Staff (close, two-handed, 1 weight) and bandages (0 weight)",
+      "&bull; Warhammer (close, 1 weight)",
+      "&bull; Mace (close, 1 weight)",
+      "&bull; Staff (close, two-handed, 1 weight) and bandages (0 weight)",
       "",
       "Choose one:",
-      "\ufffd Adventuring gear (1 weight) and dungeon rations (5 uses, 1 weight)",
-      "\ufffd Healing potion (0 weight)"
+      "&bull; Adventuring gear (1 weight) and dungeon rations (5 uses, 1 weight)",
+      "&bull; Healing potion (0 weight)"
     ]
   },
   "3": {
@@ -226,7 +226,7 @@
     ],
     "master": [
       "2-5 Moves",
-      "Hunter\ufffds Brother",
+      "Hunter's Brother",
       "Red of Tooth and Claw",
       "Communion of Whispers",
       "Barkskin",
@@ -261,11 +261,11 @@
     "advanced": [
       "6-10 Moves",
       "Embracing No Form",
-      "Doppelg\ufffdnger\ufffds Dance",
+      "Doppelganger's Dance",
       "Blood and Thunder",
       "The Druid Sleep",
       "World-Talker",
-      "Stalker\ufffds Sister",
+      "Stalker's Sister",
       "Formshaper",
       "Chimera",
       "Weather Weaver",
@@ -273,19 +273,19 @@
     ],
     "gear": [
       "Your load is 6+Str. You carry some token of your land, describe it. Choose your defenses:",
-      "\ufffd Hide armor (1 armor, 1 weight)",
-      "\ufffd Wooden shield (+1 armor, 1 weight)",
+      "&bull; Hide armor (1 armor, 1 weight)",
+      "&bull; Wooden shield (+1 armor, 1 weight)",
       "",
       "Choose your armament:",
-      "\ufffd Shillelagh (close, 2 weight)",
-      "\ufffd Staff (close, two-handed, 1 weight)",
-      "\ufffd Spear (close, thrown, near, 1 weight)",
+      "&bull; Shillelagh (close, 2 weight)",
+      "&bull; Staff (close, two-handed, 1 weight)",
+      "&bull; Spear (close, thrown, near, 1 weight)",
       "",
       "Choose one:",
-      "\ufffd Adventuring gear (1 weight)",
-      "\ufffd Poultices and herbs (2 uses, 1 weight)",
-      "\ufffd Halfling pipeleaf (0 weight)",
-      "\ufffd 3 antitoxin (0 weight)"
+      "&bull; Adventuring gear (1 weight)",
+      "&bull; Poultices and herbs (2 uses, 1 weight)",
+      "&bull; Halfling pipeleaf (0 weight)",
+      "&bull; 3 antitoxin (0 weight)"
     ]
   },
   "4": {
@@ -339,21 +339,21 @@
       "Taste of Blood",
       "Multiclass Initiate",
       "Steel Hide",
-      "Through Death\ufffds Eyes",
+      "Through Death's Eyes",
       "Eye for Weaponry",
       "Superior Warrior",
       ""
     ],
     "gear": [
       "Your load is 12+Str. You carry your signature weapon and dungeon rations (5 uses, 1 weight). Choose your defenses:",
-      "\ufffd Chainmail (1 armor, 1 weight) and adventuring gear (1 weight)",
-      "\ufffd Scale armor (2 armor, 3 weight)",
+      "&bull; Chainmail (1 armor, 1 weight) and adventuring gear (1 weight)",
+      "&bull; Scale armor (2 armor, 3 weight)",
       "",
       "Choose two:",
-      "\ufffd 2 Healing potions (0 weight)",
-      "\ufffd Shield (+1 armor, 2 weight)",
-      "\ufffd Antitoxin (0 weight), dungeon rations (1 weight), and poultices and herbs (1 weight)",
-      "\ufffd 22 coins"
+      "&bull; 2 Healing potions (0 weight)",
+      "&bull; Shield (+1 armor, 2 weight)",
+      "&bull; Antitoxin (0 weight), dungeon rations (1 weight), and poultices and herbs (1 weight)",
+      "&bull; 22 coins"
     ]
   },
   "5": {
@@ -398,7 +398,7 @@
     ],
     "advanced": [
       "6-10 Moves",
-      "From Hell\ufffds Heart",
+      "From Hell's Heart",
       "Burning Ring of Fire",
       "Fanning the Flames",
       "Watch the World Burn",
@@ -407,9 +407,9 @@
     "gear": [
       "Your Load is 9+STR.",
       "You carry no weapon and need no armor but the flames that burn within you. You begin with a symbol of your sacrifices past, Adventuring Gear (5 uses, 1 weight) and 1 healing potion. Then choose two:",
-      "\ufffd Dungeon Rations (5 uses, 1 weight)",
-      "\ufffd 1 Healing Potion (0 weight)",
-      "\ufffd 10 coins"
+      "&bull; Dungeon Rations (5 uses, 1 weight)",
+      "&bull; 1 Healing Potion (0 weight)",
+      "&bull; 10 coins"
     ]
   },
   "6": {
@@ -462,8 +462,8 @@
     ],
     "gear": [
       "Choose one:",
-      "\ufffd Adventuring gear (1 weight)",
-      "\ufffd Dungeon rations (1 weight) and healing potion (0 weight)"
+      "&bull; Adventuring gear (1 weight)",
+      "&bull; Dungeon rations (1 weight) and healing potion (0 weight)"
     ]
   },
   "7": {
@@ -478,9 +478,9 @@
       "Half-Elven",
       "Wild Empathy",
       "Familiar Prey",
-      "Viper\ufffds Strike",
+      "Viper's Strike",
       "Camouflage",
-      "Man\ufffds Best Friend",
+      "Man's Best Friend",
       "Blot Out the Sun",
       "Well-Trained",
       "God Amidst the Wastes",
@@ -510,9 +510,9 @@
     "advanced": [
       "6-10 Moves",
       "Wild Speech",
-      "Hunter\ufffds Prey",
-      "Viper\ufffds Fangs",
-      "Smaug\ufffds Belly",
+      "Hunter's Prey",
+      "Viper's Fangs",
+      "Smaug's Belly",
       "Strider",
       "A Safer Place",
       "Observant",
@@ -522,12 +522,12 @@
     ],
     "gear": [
       "Your load is 11+Str. You start with dungeon rations (5 uses, 1 weight), leather armor (1 armor, 1 weight), and a bundle of arrows (3 ammo, 1 weight). Choose your armament:",
-      "\ufffd Hunter's bow (near, far, 1 weight) and short sword (close, 1 weight)",
-      "\ufffd Hunter's bow (near, far, 1 weight) and spear (reach, 1 weight)",
+      "&bull; Hunter's bow (near, far, 1 weight) and short sword (close, 1 weight)",
+      "&bull; Hunter's bow (near, far, 1 weight) and spear (reach, 1 weight)",
       "",
       "Choose one:",
-      "\ufffd Adventuring gear (1 weight) and dungeon rations (1 weight)",
-      "\ufffd Adventuring gear (1 weight) and bundle of arrows (3 ammo, 1 weight)"
+      "&bull; Adventuring gear (1 weight) and dungeon rations (1 weight)",
+      "&bull; Adventuring gear (1 weight) and bundle of arrows (3 ammo, 1 weight)"
     ]
   },
   "8": {
@@ -584,16 +584,16 @@
     ],
     "gear": [
       "Your load is 9+Str. You start with dungeon rations (5 uses, 1 weight), leather armor (1 armor, 1 weight), 3 uses of your chosen poison, and 10 coins. Choose your arms:",
-      "\ufffd Dagger (hand, 1 weight) and short sword (close, 1 weight)",
-      "\ufffd Rapier (close, precise, 1 weight)",
+      "&bull; Dagger (hand, 1 weight) and short sword (close, 1 weight)",
+      "&bull; Rapier (close, precise, 1 weight)",
       "",
       "Choose a ranged weapon:",
-      "\ufffd 3 throwing daggers (thrown, near, 0 weight)",
-      "\ufffd Ragged Bow (near, 2 weight) and bundle of arrows (3 ammo, 1 weight)",
+      "&bull; 3 throwing daggers (thrown, near, 0 weight)",
+      "&bull; Ragged Bow (near, 2 weight) and bundle of arrows (3 ammo, 1 weight)",
       "",
       "Choose one:",
-      "\ufffd Adventuring gear (1 weight)",
-      "\ufffd Healing potion (0 weight)"
+      "&bull; Adventuring gear (1 weight)",
+      "&bull; Healing potion (0 weight)"
     ]
   },
   "9": {
@@ -641,7 +641,7 @@
       "6-10 Moves",
       "Master",
       "Greater Empowered Magic",
-      "Enchanter\ufffds Soul",
+      "Enchanter's Soul",
       "Highly Logical",
       "Arcane Armor",
       "Protective Counter",
@@ -653,16 +653,16 @@
     ],
     "gear": [
       "Your load is 7+Str. You start with your spellbook (1 weight) and dungeon rations (5 uses, 1 weight). Choose your defenses:",
-      "\ufffd Leather armor (1 armor, 1 weight)",
-      "\ufffd Bag of books (5 uses, 2 weight) and 3 healing potions",
+      "&bull; Leather armor (1 armor, 1 weight)",
+      "&bull; Bag of books (5 uses, 2 weight) and 3 healing potions",
       "",
       "Choose your weapon:",
-      "\ufffd Dagger (hand, 1 weight)",
-      "\ufffd Staff (close, two-handed, 1 weight)",
+      "&bull; Dagger (hand, 1 weight)",
+      "&bull; Staff (close, two-handed, 1 weight)",
       "",
       "Choose one:",
-      "\ufffd Healing potion (0 weight)",
-      "\ufffd 3 antitoxins (0 weight)"
+      "&bull; Healing potion (0 weight)",
+      "&bull; 3 antitoxins (0 weight)"
     ]
   }
 }
