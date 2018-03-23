@@ -1,7 +1,7 @@
 {
   "0": {
     "race": [
-      "Outsider",
+      "**Outsider**",
       "You may be elf, dwarf, halfling, or human, but you and your people are not from around here. At the beginning of each session, the GM will ask you something about your homeland, why you left, or what you left behind. If you answer them, mark XP."
     ],
     "master": [
@@ -34,7 +34,7 @@
     "align": [
       "**Chaotic**",
       "You eschew a convention of the civilized world.",
-      "Neutral",
+      "**Neutral**",
       "Teach someone the ways of your people."
     ],
     "advanced": [
@@ -51,19 +51,20 @@
     ],
     "gear": [
       "Your Load is 8+Str. You carry dungeon rations (5 uses, 1 weight), a dagger (hand, 1 weight) some token of where you've traveled or where you're from, and your choice of weapon:",
-      "-- Axe (close, 1 weight)",
-      "-- Two handed sword (close, +1 damage, 2 weight)",
+      "• Axe (close, 1 weight)",
+      "• Two handed sword (close, +1 damage, 2 weight)",
       "",
       "Choose one:",
-      "-- Adventuring gear (1 weight) and dungeon rations (5 uses, 1 weight)",
-      "-- Chainmail (1 armor, 1 weight)"
+      "• Adventuring gear (1 weight) and dungeon rations (5 uses, 1 weight)",
+      "• Chainmail (1 armor, 1 weight)"
     ]
   },
   "1": {
     "race": [
-      "Elf",
+      "**Elf**",
       "When you enter an important location (your call) you can ask the GM for one fact from the history of that location.",
-      "Human",
+      "",
+      "**Human**",
       "When you first enter a civilized settlement someone who respects the custom of hospitality to minstrels will take you in as their guest."
     ],
     "master": [
