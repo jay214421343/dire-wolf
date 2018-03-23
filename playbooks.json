@@ -2,13 +2,14 @@
   "0": {
     "race": [
       "**Outsider**",         
-      "You may be elf, dwarf, halfling, or human,",
-      "but you and your people are not from",
-      "around here. At the beginning of each",
-      "session, the GM will ask you something",
-      "about your homeland, why you left, or",
-      "what you left behind.",
-      "If you answer them, mark XP.",
+      "You may be elf, dwarf, halfling, or",
+      "human, but you and your people",
+      "are not from around here. At the",
+      "beginning of each session, the GM",
+      "will ask you something about your",
+      "homeland, why you left, or what",
+      "you left behind. If you answer",
+      "them, mark XP.",
       ""
     ],
     "master": [
@@ -75,9 +76,17 @@
   "1": {
     "race": [
       "**Elf**",
-      "When you enter an important location (your call) you can ask the GM for one fact from the history of that location.",
+      "When you enter an important",
+      "location (your call) you can ask",
+      "the GM for one fact from the",
+      "history of that location.",
+      "",
       "**Human**",
-      "When you first enter a civilized settlement someone who respects the custom of hospitality to minstrels will take you in as their guest."
+      "When you first enter a civilized",
+      "settlement someone who respects", 
+      "the custom of hospitality to",
+      "minstrels will take you in as their",
+      "guest."
     ],
     "master": [
       "2-5 Moves",
@@ -106,11 +115,16 @@
     ],
     "align": [
       "**Good**",
-      "Perform your art to aid someone else.",
+      "Perform your art to aid someone",
+      "else.",
+      "",
       "**Neutral**",
-      "Avoid a conflict or defuse a tense situation.",
+      "Avoid a conflict or defuse a tense",
+      "situation.",
+      "",
       "**Chaotic**",
-      "Spur others to significant and unplanned decisive action."
+      "Spur others to significant and un-",
+      "planned decisive action."
     ],
     "advanced": [
       "6-10 Moves",
@@ -153,10 +167,19 @@
   },
   "2": {
     "race": [
-      "**Dwarf**",
-      "You are one with stone. When you commune you are also granted a special version of Words of the Unspeaking as a rote which only works on stone.",
-      "**Human**",
-      "Your faith is diverse. Choose one wizard spell. You can cast and be granted that spell as if it was a cleric spell."
+      "Dwarf",
+      "You are one with stone. When",
+      "you commune you are also",
+      "granted a special version of",
+      "Words of the Unspeaking as",
+      "a rote which only works on",
+      "stone.",
+      "",
+      "Human",
+      "Your faith is diverse. Choose one", 
+      "wizard spell. You can cast and be",
+      "granted that spell as if it was a",
+      "cleric spell."
     ],
     "master": [
       "2-5 Moves",
