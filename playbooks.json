@@ -72,9 +72,7 @@
       "Elf",
       "When you enter an important location (your call) you can ask the GM for one fact from the history of that location.",
       "Human",
-      "When you first enter a civilized settlement someone who respects the custom of hospitality to minstrels will take you in as their guest.",
-      "\ufffd Halfling pipeleaf (0 weight)",
-      "\ufffd 3 coins"
+      "When you first enter a civilized settlement someone who respects the custom of hospitality to minstrels will take you in as their guest."
     ],
     "master": [
       "2-5 Moves",
@@ -109,32 +107,7 @@
       "Chaotic",
       "Spur others to significant and unplanned decisive action.",
       "Elf",
-      "When you enter an important location (your call) you can ask the GM for one fact from the history of that location.",
-      "Human",
-      "When you first enter a civilized settlement someone who respects the custom of hospitality to minstrels will take you in as their guest.",
-      "Arcane Art",
-      "Bardic Lore",
-      "Charming and Open",
-      "A Port in the Storm",
-      "Your load is 9+Str. You have dungeon rations (5 uses, 1 weight). Choose one instrument, all are 0 weight for you:",
-      "\ufffd Your father's mandolin, repaired",
-      "\ufffd A fine lute, a gift from a noble",
-      "\ufffd The pipes with which you courted your first love",
-      "\ufffd A stolen horn",
-      "\ufffd A fiddle, never before played",
-      "\ufffd A songbook in a forgotten tongue",
-      "",
-      "Choose your clothing:",
-      "\ufffd Leather armor (1 armor, 1 weight)",
-      "\ufffd Ostentatious clothes (0 weight)",
-      "",
-      "Choose your armament:",
-      "\ufffd Dueling rapier (close, precise, 2 weight)",
-      "\ufffd Worn bow (near, 2 weight), bundle of arrows (3 ammo, 1 weight), and short sword (close, 1 weight)",
-      "",
-      "Choose one:",
-      "\ufffd Adventuring gear (1 weight)",
-      "\ufffd Bandages (0 weight)"
+      "When you enter an important location (your call) you can ask the GM for one fact from the history of that location."
     ],
     "advanced": [
       "6-10 Moves",
@@ -272,9 +245,7 @@
       "Human",
       "As your people learned to bind animals to field and farm, so too are you bound to them. You may always take the shape of any domesticated animal, in addition to your normal options.",
       "Halfling",
-      "You sing the healing songs of spring and brook. When you make camp, you and your allies heal +1d6.",
-      "\ufffd Halfling pipeleaf (0 weight)",
-      "\ufffd 3 antitoxin (0 weight)"
+      "You sing the healing songs of spring and brook. When you make camp, you and your allies heal +1d6."
     ],
     "master": [
       "2-5 Moves",
@@ -312,21 +283,7 @@
       "Elf",
       "The sap of the elder trees flows within you. In addition to any other attunements, the Great Forest is always considered your land.",
       "Human",
-      "As your people learned to bind animals to field and farm, so too are you bound to them. You may always take the shape of any domesticated animal, in addition to your normal options.",
-      "Halfling",
-      "You sing the healing songs of spring and brook. When you make camp, you and your allies heal +1d6.",
-      "Your load is 6+Str. You carry some token of your land, describe it. Choose your defenses:",
-      "\ufffd Hide armor (1 armor, 1 weight)",
-      "\ufffd Wooden shield (+1 armor, 1 weight)",
-      "",
-      "Choose your armament:",
-      "\ufffd Shillelagh (close, 2 weight)",
-      "\ufffd Staff (close, two-handed, 1 weight)",
-      "\ufffd Spear (close, thrown, near, 1 weight)",
-      "",
-      "Choose one:",
-      "\ufffd Adventuring gear (1 weight)",
-      "\ufffd Poultices and herbs (2 uses, 1 weight)"
+      "As your people learned to bind animals to field and farm, so too are you bound to them. You may always take the shape of any domesticated animal, in addition to your normal options."
     ],
     "advanced": [
       "6-10 Moves",
