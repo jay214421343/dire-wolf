@@ -420,9 +420,13 @@
   "5": {
     "race": [
       "**Human**",
-      "When you Make Camp next to a large, open flame, regain all of your HP.",
+      "When you Make Camp next to a",
+      "large, open flame, regain all of your",
+      "HP.",
+      "",
       "**Salamander**",
-      "Non-magical heat and fire cannot harm you."
+      "Non-magical heat and fire cannot",
+      "harm you."
     ],
     "master": [
       "2-5 Moves",
@@ -451,11 +455,15 @@
     ],
     "align": [
       "**Evil**",
-      "Sacrifice an unwilling victim to the flames.",
+      "Sacrifice an unwilling victim to the",
+      "flames.",
+      "",
       "**Chaotic**",
       "Spread a dangerous new idea.",
+      "",
       "**Neutral**",
-      "Exchange a sacrifice, freely given, for a service rendered."
+      "Exchange a sacrifice, freely given,",
+      "for a service rendered."
     ],
     "advanced": [
       "6-10 Moves",
@@ -476,7 +484,9 @@
   "6": {
     "race": [
       "**Human**",
-      "When you pray for guidance, even for a moment, and ask, \"What here is evil?\"\" the GM will tell you, honestly."
+      "When you pray for guidance, even",
+      "for a moment, and ask, \"What here",
+      "is evil?\" the GM will tell you, honestly."
     ],
     "master": [
       "2-5 Moves",
@@ -505,9 +515,12 @@
     ],
     "align": [
       "**Lawful**",
-      "Deny mercy to a criminal or unbeliever.",
+      "Deny mercy to a criminal or",
+      "unbeliever.",
+      "",
       "**Good**",
-      "Endanger yourself to protect someone weaker than you."
+      "Endanger yourself to protect",
+      "someone weaker than you."
     ],
     "advanced": [
       "6-10 Moves",
@@ -537,9 +550,15 @@
   "7": {
     "race": [
       "**Elf**",
-      "When you undertake a perilous journey through wilderness whatever job you take you succeed as if you rolled a 10+.",
+      "When you undertake a perilous",
+      "journey through wilderness",
+      "whatever job you take you succeed",
+      "as if you rolled a 10+.",
+      "",
       "**Human**",
-      "When you make camp in a dungeon or city, you don't need to consume a ration."
+      "When you make camp in a dungeon",
+      "or city, you don't need to consume a",
+      "ration."
     ],
     "master": [
       "2-5 Moves",
@@ -569,9 +588,13 @@
     ],
     "align": [
       "**Chaotic**",
-      "Free someone from literal or figurative bonds.",
+      "Free someone from literal or",
+      "figurative bonds.",
+      "",
       "**Good**",
-      "Endanger yourself to combat an unnatural threat.",
+      "Endanger yourself to combat an",
+      "unnatural threat.",
+      "",
       "**Neutral**",
       "Help an animal or spirit of the wild."
     ],
@@ -602,9 +625,13 @@
   "8": {
     "race": [
       "**Halfling**",
-      "When you attack with a ranged weapon, deal +2 damage.",
+      "When you attack with a ranged",
+      "weapon, deal +2 damage.",
+      "",
       "**Human**",
-      "You are a professional. When you spout lore or discern realities about criminal activities, take +1."
+      "You are a professional. When you",
+      "spout lore or discern realities about",
+      "criminal activities, take +1."
     ],
     "master": [
       "2-5 Moves",
@@ -633,10 +660,14 @@
     "align": [
       "**Chaotic**",
       "Leap into danger without a plan.",
+      "",
       "**Neutral**",
-      "Avoid detection or infiltrate a location.",
+      "Avoid detection or infiltrate a",
+      "location.",
+      "",
       "**Evil**",
-      "Shift danger or blame from yourself to someone else."
+      "Shift danger or blame from yourself",
+      "to someone else."
     ],
     "advanced": [
       "6-10 Moves",
@@ -669,9 +700,12 @@
   "9": {
     "race": [
       "**Elf**",
-      "Magic is as natural as breath to you. Detect Magic is a cantrip for you.",
+      "Magic is as natural as breath to you.",
+      "Detect Magic is a cantrip for you.",
+      "",
       "**Human**",
-      "Choose one cleric spell. You can cast it as if it was a wizard spell."
+      "Choose one cleric spell. You can cast",
+      "it as if it was a wizard spell."
     ],
     "master": [
       "2-5 Moves",
@@ -702,8 +736,11 @@
     "align": [
       "**Good**",
       "Use magic to directly aid another.",
+      "",
       "**Neutral**",
-      "Discover something about a magical mystery.",
+      "Discover something about a magical",
+      "mystery.",
+      "",
       "**Evil**",
       "Use magic to cause terror and fear."
     ],
