@@ -1,4 +1,4 @@
-{
+**Neutral**{
   "0": {
     "race": [
       "Outsider",
@@ -32,7 +32,7 @@
       ""
     ],
     "align": [
-      "Chaotic",
+      "**Chaotic**",
       "You eschew a convention of the civilized world.",
       "Neutral",
       "Teach someone the ways of your people."
@@ -92,11 +92,11 @@
       ""
     ],
     "align": [
-      "Good",
+      "**Good**",
       "Perform your art to aid someone else.",
       "Neutral",
       "Avoid a conflict or defuse a tense situation.",
-      "Chaotic",
+      "**Chaotic**",
       "Spur others to significant and unplanned decisive action."
     ],
     "advanced": [
@@ -171,11 +171,11 @@
       "Cast a Spell"
     ],
     "align": [
-      "Good",
+      "**Good**",
       "Endanger yourself to heal another.",
-      "Lawful",
+      "**Lawful**",
       "Endanger yourself following the precepts of your church or god.",
-      "Evil",
+      "**Evil**",
       "Harm another to prove the superiority of your church or god."
     ],
     "advanced": [
@@ -243,11 +243,11 @@
       ""
     ],
     "align": [
-      "Chaotic",
+      "**Chaotic**",
       "Destroy a symbol of civilization.",
-      "Good",
+      "**Good**",
       "Help something or someone grow.",
-      "Neutral",
+      "**Neutral**",
       "Eliminate an unnatural menace."
     ],
     "advanced": [
@@ -316,18 +316,18 @@
       ""
     ],
     "align": [
-      "Good",
+      "**Good**",
       "Defend those weaker than you.",
-      "Neutral",
+      "**Neutral**",
       "Defeat a worthy opponent.",
-      "Evil",
+      "**Evil**",
       "Kill a defenseless or surrendered enemy."
     ],
     "advanced": [
       "6-10 Moves",
       "Bloodthirsty",
       "Armored Perfection",
-      "Evil Eye",
+      "**Evil** Eye",
       "Taste of Blood",
       "Multiclass Initiate",
       "Steel Hide",
@@ -381,11 +381,11 @@
       "Hand Crafted"
     ],
     "align": [
-      "Evil",
+      "**Evil**",
       "Sacrifice an unwilling victim to the flames.",
-      "Chaotic",
+      "**Chaotic**",
       "Spread a dangerous new idea.",
-      "Neutral",
+      "**Neutral**",
       "Exchange a sacrifice, freely given, for a service rendered."
     ],
     "advanced": [
@@ -435,9 +435,9 @@
       ""
     ],
     "align": [
-      "Lawful",
+      "**Lawful**",
       "Deny mercy to a criminal or unbeliever.",
-      "Good",
+      "**Good**",
       "Endanger yourself to protect someone weaker than you."
     ],
     "advanced": [
@@ -498,11 +498,11 @@
       ""
     ],
     "align": [
-      "Chaotic",
+      "**Chaotic**",
       "Free someone from literal or figurative bonds.",
-      "Good",
+      "**Good**",
       "Endanger yourself to combat an unnatural threat.",
-      "Neutral",
+      "**Neutral**",
       "Help an animal or spirit of the wild."
     ],
     "advanced": [
@@ -560,11 +560,11 @@
       ""
     ],
     "align": [
-      "Chaotic",
+      "**Chaotic**",
       "Leap into danger without a plan.",
-      "Neutral",
+      "**Neutral**",
       "Avoid detection or infiltrate a location.",
-      "Evil",
+      "**Evil**",
       "Shift danger or blame from yourself to someone else."
     ],
     "advanced": [
@@ -628,11 +628,11 @@
       ""
     ],
     "align": [
-      "Good",
+      "**Good**",
       "Use magic to directly aid another.",
       "Neutral",
       "Discover something about a magical mystery.",
-      "Evil",
+      "**Evil**",
       "Use magic to cause terror and fear."
     ],
     "advanced": [
