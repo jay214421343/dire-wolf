@@ -210,10 +210,14 @@
     "align": [
       "**Good**",
       "Endanger yourself to heal another.",
+      "",
       "**Lawful**",
-      "Endanger yourself following the precepts of your church or god.",
+      "Endanger yourself following the",
+      "precepts of your church or god.",
+      "",
       "**Evil**",
-      "Harm another to prove the superiority of your church or god."
+      "Harm another to prove the super-",
+      "iority of your church or god."
     ],
     "advanced": [
       "6-10 Moves",
@@ -248,11 +252,24 @@
   "3": {
     "race": [
       "**Elf**",
-      "The sap of the elder trees flows within you. In addition to any other attunements, the Great Forest is always considered your land.",
+      "The sap of the elder trees flows",
+      "within you. In addition to any other",
+      "attunements, the Great Forest is",
+      "always considered your land.",
+      "",
       "**Human**",
-      "As your people learned to bind animals to field and farm, so too are you bound to them. You may always take the shape of any domesticated animal, in addition to your normal options.",
+      "As your people learned to bind",
+      "animals to field and farm, so too",
+      "are you bound to them. You may",
+      "always take the shape of any",
+      "domesticated animal, in addition",
+      "to your normal options.",
+      "",
       "**Halfling**",
-      "You sing the healing songs of spring and brook. When you make camp, you and your allies heal +1d6."
+      "You sing the healing songs of",
+      "spring and brook. When you",
+      "make camp, you and your allies",
+      "heal +1d6."
     ],
     "master": [
       "2-5 Moves",
@@ -322,13 +339,22 @@
   "4": {
     "race": [
       "**Dwarf**",
-      "When you share a drink with someone, you may parley with them using CON instead of CHA.",
+      "When you share a drink with someone,",
+      "you may parley with them using CON",
+      "instead of CHA.",
+      "",
       "**Elf**",
-      "Choose one weapon - you can always treat weapons of that type as if they had the precise tag.",
+      "Choose one weapon - you can always",
+      "treat weapons of that type as if they",
+      "had the precise tag.",
+      "",
       "**Halfling**",
-      "When you defy danger and use your small size to your advantage, take +1.",
+      "When you defy danger and use your",
+      "small size to your advantage, take +1.",
+      "",
       "**Human**",
-      "Once per battle you may reroll a single damage roll (yours or someone else's)."
+      "Once per battle you may reroll a single",
+      "damage roll (yours or someone else's)."
     ],
     "master": [
       "2-5 Moves",
@@ -357,10 +383,13 @@
     "align": [
       "**Good**",
       "Defend those weaker than you.",
+      "",
       "**Neutral**",
       "Defeat a worthy opponent.",
+      "",
       "**Evil**",
-      "Kill a defenseless or surrendered enemy."
+      "Kill a defenseless or surrendered",
+      "enemy."
     ],
     "advanced": [
       "6-10 Moves",
