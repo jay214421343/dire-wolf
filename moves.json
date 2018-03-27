@@ -3009,5 +3009,387 @@
             "Immolator Level 6-10 Move",
             ""
         ]
+    },
+    "257": {
+        "desc": [
+            "Hack and Slash",
+            "Volley",
+            "Defy Danger",
+            "Defend",
+            "Spout Lore",
+            "Discern Realities",
+            "Parley",
+            "Aid or Interfere"
+        ],
+        "name": "Basic Moves",
+        "source": [
+            ""
+        ]
+    },
+    "258": {
+        "desc": [
+            "Last Breath",
+            "Encumbrance",
+            "Make Camp",
+            "Take Watch",
+            "Undertake a Perilous Journey",
+            "End of Session",
+            "Level Up",
+            "Carouse",
+            "Supply",
+            "Recover",
+            "Recruit",
+            "Outstanding Warrants",
+            "Bolster"
+        ],
+        "name": "Special Moves",
+        "source": [
+            ""
+        ]
+    },
+    "259": {
+        "desc": [
+            "**Starting Moves**",
+            "   Full Plate And Packing Steel",
+            "   Unencumbered, Unharmed",
+            "   The Upper Hand",
+            "   What Are You Waiting For?",
+            "   Herculean Appetites",
+            "   Musclebound",
+            "**Advanced Moves 2-10**",
+            "   Still Hungry",
+            "   Appetite For Destruction",
+            "   My Love For You Is Like A Truck",
+            "   What Is Best In Life",
+            "   Wide-Wanderer",
+            "   Usurper",
+            "   Khan Of Khans",
+            "   Samson",
+            "   Smash!",
+            "   Indestructible Hunger",
+            "   Eye For Weakness",
+            "   On The Move",
+            "**Advanced Moves 6-10**",
+            "   A Good Day To Die",
+            "   Kill ‘Em All",
+            "   War Cry",
+            "   Mark Of Might",
+            "   More! Always More!",
+            "   The One Who Knocks",
+            "   Healthy Distrust",
+            "   For The Blood God"
+        ],
+        "name": "Barbarian",
+        "source": [
+            ""
+        ]
+    },
+    "260": {
+        "desc": [
+          "**Starting Moves**",
+          "   Arcane Art",
+          "   Bardic Lore",
+          "   Charming and Open",
+          "   A Port in the Storm",
+          "**Advanced Moves 2-5**",
+          "   Healing Song",
+          "   Vicious Cacophony",
+          "   It Goes To Eleven",
+          "   Metal Hurlant",
+          "   A Little Help From My Friends",
+          "   Eldritch Tones",
+          "   Duelist’s Parry",
+          "   Bamboozle",
+          "   Multiclass Dabbler",
+          "   Multiclass Initiate",
+          "**Advanced Moves 6-10**",
+          "   Healing Chorus",
+          "   Vicious Blast",
+          "   Unforgettable Face",
+          "   Reputation",
+          "   Eldritch Chord",
+          "   An Ear For Magic",
+          "   Devious",
+          "   Duelist’s Block",
+          "   Con",
+          "   Multiclass Master"
+      ],
+      "name": "Bard",
+      "source": [
+          ""
+      ]
+    },
+    "261": {
+        "desc": [
+          "**Starting Moves**",
+          "   Divine Guidance",
+          "   Turn Undead",
+          "   Commune",
+          "   Cast a Spell",
+          "**Advanced Moves 2-5**",
+          "   Chosen One",
+          "   Invigorate",
+          "   The Scales of Life and Death",
+          "   Serenity",
+          "   First Aid",
+          "   Divine Intervention",
+          "   Penitent",
+          "   Empower",
+          "   Orison for Guidance",
+          "   Divine Protection",
+          "**Advanced Moves 6-10**",
+          "   Devoted Healer",
+          "   Anointed",
+          "   Apotheosis",
+          "   Reaper",
+          "   Providence",
+          "   Greater First Aid",
+          "   Divine Invincibility",
+          "   Martyr",
+          "   Divine Armor",
+          "   Greater Empower",
+          "   Multiclass Dabbler"
+      ],
+      "name": "Cleric",
+      "source": [
+          ""
+      ]
+    },
+    "262": {
+        "desc": [
+          "**Starting Moves**",
+          "   Born of the Soil",
+          "   By Nature Sustained",
+          "   Spirit Tongue",
+          "   Shapeshifter",
+          "   Studied Essence",
+          "**Advanced Moves 2-5**",
+          "   Hunter’s Brother",
+          "   Red of Tooth and Claw",
+          "   Communion of Whispers",
+          "   Barkskin",
+          "   Eyes of the Tiger",
+          "   Shed",
+          "   Thing-Talker",
+          "   Formcrafter",
+          "   Elemental Mastery",
+          "   Balance",
+          "**Advanced Moves 6-10**",
+          "   Embracing No Form",
+          "   Doppelgänger’s Dance",
+          "   Blood and Thunder",
+          "   The Druid Sleep",
+          "   World-Talker",
+          "   Stalker’s Sister",
+          "   Formshaper",
+          "   Chimera",
+          "   Weather Weaver"
+      ],
+      "name": "Druid",
+      "source": [
+          ""
+      ]
+    },
+    "263": {
+        "desc": [
+          "**Starting Moves**",
+          "   Bend Bars, Lift Gates",
+          "   Armored",
+          "   Signature Weapon",
+          "**Advanced Moves 2-5**",
+          "   Merciless",
+          "   Heirloom",
+          "   Armor Mastery",
+          "   Improved Weapon",
+          "   Seeing Red",
+          "   Interrogator",
+          "   Scent of Blood",
+          "   Multiclass Dabbler",
+          "   Iron Hide",
+          "   Blacksmith",
+          "**Advanced Moves 6-10**",
+          "   Bloodthirsty",
+          "   Armored Perfection",
+          "   Evil Eye",
+          "   Taste of Blood",
+          "   Multiclass Initiate",
+          "   Steel Hide",
+          "   Through Death’s Eyes",
+          "   Eye for Weaponry",
+          "   Superior Warrior"
+      ],
+      "name": "Fighter",
+      "source": [
+          ""
+      ]
+    },
+    "264": {
+        "desc": [
+          "**Starting Moves**",
+          "   Burning Brand",
+          "   Fighting Fire With Fire",
+          "   Give Me Fuel, Give me Fire",
+          "   Hand Crafted",
+          "**Advanced Moves 2-5**",
+          "   Lore of Flame",
+          "   Burns Twice as Bright",
+          "   Burns Half as Long",
+          "   This Killing Fire",
+          "   Firebrand",
+          "   Ogdru Jahad",
+          "   Moth to the Flame",
+          "   Burning Bridges",
+          "   The Enkindler",
+          "   Sick Burn",
+          "**Advanced Moves 6-10**",
+          "   From Hell’s Heart",
+          "   Burning Ring of Fire",
+          "   Fanning the Flames",
+          "   Watch the World Burn"
+      ],
+      "name": "Immolator",
+      "source": [
+          ""
+      ]
+    },
+    "265": {
+        "desc": [
+          "**Starting Moves**",
+          "   Lay on Hands (Cha)",
+          "   Armored",
+          "   I Am the Law",
+          "   Quest",
+          "**Advanced Moves 2-5**",
+          "   Divine Favor",
+          "   Bloody Aegis",
+          "   Smite",
+          "   Exterminatus",
+          "   Charge!",
+          "   Staunch Defender",
+          "   Setup Strike",
+          "   Holy Protection",
+          "   Voice of Authority",
+          "   Hospitaller",
+          "**Advanced Moves 6-10**",
+          "   Evidence of Faith",
+          "   Holy Smite",
+          "   Ever Onward",
+          "   Impervious Defender",
+          "   Tandem Strike",
+          "   Divine Protection",
+          "   Divine Authority",
+          "   Perfect Hospitaller",
+          "   Indomitable",
+          "   Perfect Knight"
+      ],
+      "name": "Paladin",
+      "source": [
+          ""
+      ]
+    },
+    "266": {
+        "desc": [
+          "**Starting Moves**",
+          "   Hunt and Track (Wis)",
+          "   Called Shot",
+          "   Animal Companion",
+          "   Command",
+          "**Advanced Moves 2-5**",
+          "   Half-Elven",
+          "   Wild Empathy",
+          "   Familiar Prey",
+          "   Viper’s Strike",
+          "   Camouflage",
+          "   Man’s Best Friend",
+          "   Blot Out the Sun",
+          "   Well-Trained",
+          "   God Amidst the Wastes",
+          "   Follow Me",
+          "   A Safe Place",
+          "**Advanced Moves 6-10**",
+          "   Wild Speech",
+          "   Hunter’s Prey",
+          "   Viper’s Fangs",
+          "   Smaug’s Belly",
+          "   Strider",
+          "   A Safer Place",
+          "   Observant",
+          "   Special Trick",
+          "   Unnatural Ally"
+      ],
+      "name": "Ranger",
+      "source": [
+          ""
+      ]
+    },
+    "267": {
+        "desc": [
+          "**Starting Moves**",
+          "   Trap Expert",
+          "   Tricks of the Trade",
+          "   Backstab",
+          "   Flexible Morals",
+          "   Poisoner",
+          "**Advanced Moves 2-5**",
+          "   Cheap Shot",
+          "   Cautious",
+          "   Wealth and Taste",
+          "   Shoot First",
+          "   Poison Master",
+          "   Envenom",
+          "   Brewer",
+          "   Underdog",
+          "   Connections",
+          "**Advanced Moves 6-10**",
+          "   Dirty Fighter",
+          "   Extremely Cautious",
+          "   Alchemist",
+          "   Serious Underdog",
+          "   Evasion",
+          "   Strong Arm, True Aim",
+          "   Escape Route",
+          "   Disguise",
+          "   Heist"
+      ],
+      "name": "Thief",
+      "source": [
+          ""
+      ]
+    },
+    "268": {
+        "desc": [
+          "**Starting Moves**",
+          "   Spellbook",
+          "   Prepare Spells",
+          "   Cast a Spell (Int)",
+          "   Spell Defense",
+          "   Ritual",
+          "**Advanced Moves 2-5**",
+          "   Prodigy",
+          "   Empowered Magic",
+          "   Fount of Knowledge",
+          "   Know-It-All",
+          "   Expanded Spellbook",
+          "   Enchanter",
+          "   Logical",
+          "   Arcane Ward",
+          "   Counterspell",
+          "   Quick Study",
+          "**Advanced Moves 6-10**",
+          "   Master",
+          "   Greater Empowered Magic",
+          "   Enchanter’s Soul",
+          "   Highly Logical",
+          "   Arcane Armor",
+          "   Protective Counter",
+          "   Ethereal Tether",
+          "   Mystical Puppet Strings",
+          "   Spell Augmentation",
+          "   Self-Powered"
+      ],
+      "name": "Wizard",
+      "source": [
+          ""
+      ]    
     }
 }
