@@ -457,7 +457,7 @@ When you try to retrieve an item from a bag of holding, roll+WIS.
          •You get the exact item, but it takes a while
          •You get a similar item of the GM's choice, but it only takes a moment
 
-No matter how many items it contains, a bag of holding is always 0 weight.
+\**No matter how many items it contains, a bag of holding is always 0 weight*.
 
 ***
 
