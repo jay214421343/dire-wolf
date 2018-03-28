@@ -464,7 +464,7 @@
             "On a 7-9, the spell is cast, but choose one:",
             "   • You draw unwelcome attention or put yourself in a spot. The GM will tell you how.",
             "   • Your casting distances you from your deity - take -1 ongoing to cast a spell until the next time you commune.",
-            "   • After you cast it, the spell is revoked by your deity. You cannot cast the spell again until you commune and have it granted to you.",
+            "   • After you cast it, the spell is revoked by your deity. You cannot cast the spell again until you commune and have it granted to you."
         ],
         "miss": [
             "Miss!"
