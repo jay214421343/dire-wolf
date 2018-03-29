@@ -131,7 +131,7 @@
             "Take +1 forward when acting on the answers."
         ],
         "partial": [
-            "On a 7-9, ask 1.",
+            "On a 7-9, ask the GM 1 question from the list below.",
             "   • What happened here recently?",
             "   • What is about to happen?",
             "   • What should I be on the lookout for?",
@@ -177,7 +177,7 @@
             "On a 10+, they take +1 or -2 to their roll, your choice."
         ],
         "partial": [
-            "On a 7-9, they still get a modifier, but you also expose yourself to danger, retribution, or cost."
+            "On a 7-9, they take +1 or -2 to their roll, your choice, but you also expose yourself to danger, retribution, or cost."
         ],
         "miss": [
             "Miss!"
@@ -228,17 +228,10 @@
     },
     "10": {
         "desc": [
-            "When you travel through hostile territory, choose one member of the party to act as trailblazer, one to scout ahead, and one to be quartermaster. Each character with a job to do rolls+Wis.",
-            "",
-            " • On a 10+:",
-            "   • the quartermaster reduces the number of rations required by one",
-            "   • the trailblazer reduces the amount of time it takes to reach your destination (the GM will say by how much)",
-            "   • the scout will spot any trouble quick enough to let you get the drop on it",
-            "",
-            " • On a 7-9, each role performs their job as expected: the normal number of rations are consumed, the journey takes about as long as expected, no one gets the drop on you but you don't get the drop on them either."
+            "When you travel through hostile territory, choose one member of the party to act as trailblazer, one to scout ahead, and one to be quartermaster. Each character with a job to do rolls+Wis."
         ],
         "hit": [
-            " • On a 10+:",
+            "On a 10+:",
             "   • the quartermaster reduces the number of rations required by one",
             "   • the trailblazer reduces the amount of time it takes to reach your destination (the GM will say by how much)",
             "   • the scout will spot any trouble quick enough to let you get the drop on it"
@@ -336,7 +329,7 @@
             "On a 10+, word has spread of your deeds and everyone recognizes you."
         ],
         "partial": [
-            "On a 7-9, as above, and the GM chooses a complication:",
+            "On a 7-9, word has spread of your deeds and everyone recognizes you, and the GM chooses a complication:",
             "   • The local constabulary has a warrant out for your arrest.",
             "   • Someone has put a price on your head.",
             "   • Someone important to you has been put in a bad spot as a result of your actions."
@@ -402,7 +395,7 @@
             "On a 10+ the target takes 1d10 damage and is deafened for a few minutes."
         ],
         "partial": [
-            "On a 7-9 you still damage your target, but it's out of control: the GM will choose an additional target nearby."
+            "On a 7-9 the target takes 1d10 damage and is deafened for a few minutes, but it's out of control: the GM will choose an additional target nearby."
         ],
         "miss": [
             "Miss!"
@@ -622,12 +615,12 @@
             "When you go into battle, roll+WIS."
         ],
         "hit": [
-            "On a 10+, name someone who will live and someone who will die.",
+            "On a 10+, name someone who will live **and** someone who will die.",
             "",
             "Name NPCs, not player characters. The GM will make your vision come true, if it's even remotely possible."
         ],
         "partial": [
-            "On a 7-9, name someone who will live or someone who will die.",
+            "On a 7-9, name someone who will live **or** someone who will die.",
             "",
             "Name NPCs, not player characters. The GM will make your vision come true, if it's even remotely possible."
         ],
@@ -648,7 +641,7 @@
             "On a 10+ you heal 1d8 damage or remove one disease."
         ],
         "partial": [
-            "On a 7-9, they are healed, but the damage or disease is transferred to you."
+            "On a 7-9, you heal 1d8 damage or remove one disease, but the damage or disease is transferred to you."
         ],
         "miss": [
             "Miss!"
@@ -710,14 +703,16 @@
             "When you attack a defenseless or surprised enemy at range, you can choose to deal your damage or name your target and roll+DEX."
         ],
         "hit": [
-            "   • Head • 10+: They do nothing but stand and drool for a few moments, plus your damage.",
-            "   • Arms • 10+: They drop anything they're holding, plus your damage.",
-            "   • Legs • 10+: They're hobbled and slow moving, plus your damage."
+            "On a 10+:",
+            "   • Head: They do nothing but stand and drool for a few moments, plus your damage.",
+            "   • Arms: They drop anything they're holding, plus your damage.",
+            "   • Legs: They're hobbled and slow moving, plus your damage."
         ],
         "partial": [
-            "   • Head • 7-9: They do nothing but stand and drool for a few moments.",
-            "   • Arms • 7-9: They drop anything they're holding.",
-            "   • Legs • 7-9: They're hobbled and slow moving."
+            "On a 7-9:",
+            "   • Head: They do nothing but stand and drool for a few moments.",
+            "   • Arms: They drop anything they're holding.",
+            "   • Legs: They're hobbled and slow moving."
         ],
         "miss": [
             "Miss!"
@@ -937,7 +932,7 @@
             "   • remove the dangerous tag"
         ],
         "partial": [
-            "On a 7-9 choose one:",
+            "On a 7-9 choose one of the following tags:",
             "   • hand",
             "   • thrown, near",
             "   • +1 damage",
@@ -960,7 +955,7 @@
             "On a 10+ it does as you command, taking the shape and movement you desire for as long as it has fuel on which to burn."
         ],
         "partial": [
-            "On a 7-9 the effect is short-lived, lasting only a moment."
+            "On a 7-9 it does as you command, taking the shape and movement you desire but the effect is short-lived, lasting only a moment."
         ],
         "miss": [
             "Miss!"
@@ -1130,7 +1125,9 @@
             "Metal Hurlant",
             "Reputation",
             "Turn Undead",
-            "Cast a Spell (Cleric)",
+            "Cast a Spell (Cleric)"         
+        ],
+        "hit": [
             "Shapeshifter",
             "Communion of Whispers",
             "Elemental Mastery",
@@ -1161,18 +1158,71 @@
             "Burning Ring of Fire",
             "Watch the World Burn"
         ],
-        "hit": [
-            ""
-        ],
         "partial": [
-            ""
+            "Shapeshifter",
+            "Communion of Whispers",
+            "Elemental Mastery",
+            "Bend Bars, Lift Gates",
+            "Heirloom",
+            "Evil Eye",
+            "Through Death's Eyes",
+            "Lay on Hands",
+            "I Am the Law",
+            "Hunt and Track",
+            "Called Shot",
+            "Trap Expert",
+            "Tricks of the Trade",
+            "Backstab",
+            "Connections",
+            "Escape Route",
+            "Cast a Spell (Wizard",
+            "What Are You Waiting For?",
+            "War Cry",
+            "For the Blood God",
+            "Burning Brand",
+            "Zuko Style",
+            "Lore of Flame",
+            "Firebrand",
+            "Moth to the Flame",
+            "The Enkindler",
+            "Sick Burn",
+            "Burning Ring of Fire",
+            "Watch the World Burn"
         ],
         "miss": [
-            ""
+            "Shapeshifter",
+            "Communion of Whispers",
+            "Elemental Mastery",
+            "Bend Bars, Lift Gates",
+            "Heirloom",
+            "Evil Eye",
+            "Through Death's Eyes",
+            "Lay on Hands",
+            "I Am the Law",
+            "Hunt and Track",
+            "Called Shot",
+            "Trap Expert",
+            "Tricks of the Trade",
+            "Backstab",
+            "Connections",
+            "Escape Route",
+            "Cast a Spell (Wizard",
+            "What Are You Waiting For?",
+            "War Cry",
+            "For the Blood God",
+            "Burning Brand",
+            "Zuko Style",
+            "Lore of Flame",
+            "Firebrand",
+            "Moth to the Flame",
+            "The Enkindler",
+            "Sick Burn",
+            "Burning Ring of Fire",
+            "Watch the World Burn"
         ],
         "name": "Supported Moves List",
         "source": [
-            ""
+            " "
         ]
     }
 }
