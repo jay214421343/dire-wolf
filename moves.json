@@ -3115,7 +3115,10 @@
             "Recover",
             "Recruit",
             "Outstanding Warrants",
-            "Bolster"
+            "Bolster",
+	    "Scout Ahead",
+	    "Navigate",
+	    "Manage Provisions",
         ],
         "name": "Special Moves",
         "source": [
@@ -3532,7 +3535,7 @@
 	    "     • Careful management reduces the amount of rations consumed (ask the GM by how much)",
 	    "     • The party consumes the expected amount and the food you prepare is excellent - describe it, and everyone who licks their lips takes +1 forward"
 	],
-        "name": "Scout Ahead",
+        "name": "Manage Provisions",
         "source": [
             "Perilous Wilds",
             ""
