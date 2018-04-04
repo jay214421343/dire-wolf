@@ -3496,8 +3496,8 @@
             " • On a miss, Mark XP, and the GM makes a move.",
 	    "     • You get the drop on whatever lies ahead",
 	    "     • You discern a beneficial aspect of the terrain - shortcut, shelter, or tactical advantage (describe it)",
-	    "	  • You make a Discovery (ask the GM)",
- 	    "	  • You notice signs of a nearby Danger - ask the GM what it is, and what it might signify"
+	    "     • You make a Discovery (ask the GM)",
+ 	    "     • You notice signs of a nearby Danger - ask the GM what it is, and what it might signify"
         ],
         "name": "Scout Ahead",
         "source": [
@@ -3514,7 +3514,7 @@
             " • On a miss, Mark XP, and the GM makes a move.",
 	    "     • You happen upon a Discovery missed by the scout",
 	    "     • The going is slow, or you wander off course. The GM says which, and where you end up on the map",
-	    "	  • You encounter a Danger; whether or not you're surprised depends on whether the scout has the drop on it" 
+	    "     • You encounter a Danger; whether or not you're surprised depends on whether the scout has the drop on it" 
         ],
         "name": "Navigate",
         "source": [
