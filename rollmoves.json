@@ -1146,5 +1146,76 @@
         "source": [
             " "
         ]
+    },
+    "51": {
+        "desc": [
+            "When you take point and look for anything out of the ordinary, roll+WIS."
+        ],
+        "hit": [
+            "On a 10+ Choose 2 from the list below.",
+            "     • You get the drop on whatever lies ahead",
+	        "     • You discern a beneficial aspect of the terrain - shortcut, shelter, or tactical advantage (describe it)",
+	        "	  • You make a Discovery (ask the GM)",
+ 	        "	  • You notice signs of a nearby Danger - ask the GM what it is, and what it might signify"
+        ],
+        "partial": [
+            "On a 7-9 Choose 1 from the list below.",
+            "     • You get the drop on whatever lies ahead",
+	        "     • You discern a beneficial aspect of the terrain - shortcut, shelter, or tactical advantage (describe it)",
+	        "	  • You make a Discovery (ask the GM)",
+ 	        "	  • You notice signs of a nearby Danger - ask the GM what it is, and what it might signify"
+        ],
+        "miss": [
+            "On a miss, Mark XP, and the GM makes a move."
+        ],
+        "name": "Scout Ahead",
+        "source": [
+            "Perilous Wilds",
+            ""
+        ]
+    },
+    "52": {
+        "desc": [
+            "When you plot the best course through dangerous or unfamiliar lands, roll+INT."
+        ],
+        "hit": [
+            "On a 10+ You avoid dangers and distractions and make good time, reaching a point of the GM's choosing before you need to Make Camp."
+        ],
+        "partial": [
+            "On a 7-9 The GM chooses 1 from the list below.",
+            "     • You happen upon a Discovery missed by the scout",
+	        "     • The going is slow, or you wander off course. The GM says which, and where you end up on the map",
+	        "	  • You encounter a Danger; whether or not you're surprised depends on whether the scout has the drop on it"
+            
+        ],
+        "miss": [
+            "On a miss, Mark XP, and the GM makes a move."
+        ],
+        "name": "Navigate",
+        "source": [
+            "Perilous Wilds",
+            ""
+        ]	
+    },
+    "53": {
+        "desc": [
+            "When you prepare and distribute food for the party, roll+WIS."
+	    ],
+        "hit": [
+            "On a 10+ Choose 1 from the list below.",
+            "     • Careful management reduces the amount of rations consumed (ask the GM by how much)",
+	        "     • The party consumes the expected amount and the food you prepare is excellent - describe it, and everyone who licks their lips takes +1 forward"
+        ],
+        "partial": [
+            "On a 7-9 The party consumes the expected amount of rations (1 per person if Making Camp, 1 per person per day if making a Journey)."
+        ],
+        "miss": [
+            "On a miss, Mark XP, and the GM makes a move."
+        ],
+        "name": "Scout Ahead",
+        "source": [
+            "Perilous Wilds",
+            ""
+        ]
     }
 }
