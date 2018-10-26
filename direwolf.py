@@ -30,7 +30,7 @@ async def on_ready():
     client.loop.create_task(update_sources_loop()) # creates update loop for data sources
     return await client.change_presence(game=discord.Game(name='Dungeon World'))
 
-client.remove_command('help') # Overwrites the default discord help command so we can have a fancy embed one
+client.remove_command('help') # removes the default discord help command so we can have a fancy embed one
 
 # Lookup source data parsing/updating:
 UPDATE_DELAY = 60 * 1440   # update once a day, probably.
@@ -40,13 +40,17 @@ MONSTER_SOURCE = "https://raw.githubusercontent.com/Marc5567/dire-wolf/master/mo
 SPELL_SOURCE = "https://raw.githubusercontent.com/Marc5567/dire-wolf/master/spells"
 TAG_SOURCE = "https://raw.githubusercontent.com/Marc5567/dire-wolf/master/tags"
 PLAYBOOK_SOURCE = "https://raw.githubusercontent.com/Marc5567/dire-wolf/master/playbooks.json"
-ITEM_DIVIDER = "***"  # a string that divides distinct items.
-META_LINES = 0  # the number of lines of meta info each item has
+MOVE_SOURCE = "https://raw.githubusercontent.com/Marc5567/dire-wolf/master/moves.json"
+ROLLMOVE_SOURCE = "https://raw.githubusercontent.com/Marc5567/dire-wolf/master/rollmoves.json"
+ITEM_DIVIDER = "***"  
+META_LINES = 0  
 items = []
 monsters = []
 spells = []
 tags = []
 playbooks = []
+moves = []
+rollmoves = []
 
 @client.event #I'm not sure what this does? I think it's supposed to return "command not found" if user gives a command that doesn't exist? May have things that aren't defined here...
 async def on_command_error(error, ctx):
@@ -162,9 +166,41 @@ async def update_sources():
                 playbooks.append(value)
 
             print("Updated playbooks!")
+    # move indexing
+    async with aiohttp.ClientSession() as session:
+        async with session.get(MOVE_SOURCE) as resp:
+            text = await resp.text()
+            if 399 < resp.status < 600:  # 4xx, 5xx errors
+                raise Exception(f"Failed to update moves: {text}")
+
+            moves.clear()
+            d = simplejson.loads(text)
+
+            for key,value in d.items():
+
+                moves.append(value)
+
+            print("Updated moves!")
+
+    async with aiohttp.ClientSession() as session:
+        async with session.get(ROLLMOVE_SOURCE) as resp:
+            text = await resp.text()
+            if 399 < resp.status < 600:  # 4xx, 5xx errors
+                raise Exception(f"Failed to update rollmoves: {text}")
+
+            rollmoves.clear()
+            d = simplejson.loads(text)
+
+            for key,value in d.items():
+
+                rollmoves.append(value)
+
+            print("Updated rollmoves!")
+
+
 
 # Lookup commands:
-@client.command(pass_context=True)
+@client.command(pass_context=True, name='item', aliases='i')
 async def item(ctx, *, name=''):
     """Looks up a Dungeon World item.\nLists by category available by searching \"Weapons\", \"Armor\", etc.\nFull list of categories can be viewed by searching \"Item Categories\"."""
     result = search(items, 'name', name)
@@ -189,7 +225,7 @@ async def item(ctx, *, name=''):
         embed.add_field(name="\u200b", value=piece)
     await client.say(embed=embed)
 
-@client.command(pass_context=True)
+@client.command(pass_context=True, name='monster', aliases=['m'])
 async def monster(ctx, *, name=''):
     """Looks up a Dungeon World monster.\nSearch with environment name for list of monsters found in that environment.\n\"Environment List\" for a list of available environments."""
     result = search(monsters, 'name', name)
@@ -214,7 +250,7 @@ async def monster(ctx, *, name=''):
         embed.add_field(name="\u200b", value=piece)
     await client.say(embed=embed)
 
-@client.command(pass_context=True)
+@client.command(pass_context=True, name='spell', aliases='s')
 async def spell(ctx, *, name=''):
     """Looks up a Dungeon World spell.\nSearch \"Wizard\" or \"Cleric\" for class spell lists."""
     result = search(spells, 'name', name)
@@ -239,7 +275,7 @@ async def spell(ctx, *, name=''):
         embed.add_field(name="\u200b", value=piece)
     await client.say(embed=embed)
 
-@client.command(pass_context=True)
+@client.command(pass_context=True, name='tag', aliases='t')
 async def tag(ctx, *, name=''):
     """Looks up a Dungeon World item tag.\nSearch \"Item Tags\" or \"Monster Tags\" to view respective lists."""
     result = search(tags, 'name', name)
@@ -264,7 +300,7 @@ async def tag(ctx, *, name=''):
         embed.add_field(name="\u200b", value=piece)
     await client.say(embed=embed)
 
-@client.command(pass_context=True)
+@client.command(pass_context=True, name='playbook', aliases='p')
 async def playbook(ctx, *, name=''):
     """Looks up a core Dungeon World playbook.\nSearch \"list\" a list of available playbooks."""
 
@@ -300,62 +336,80 @@ async def playbook(ctx, *, name=''):
     embed.add_field(name="\u200b", value="\n__"+" "*200+"__", inline=False)
     embed.add_field(name="Gear", value=gear)
     await client.say(embed=embed)
+    
+@client.command(pass_context=True)
+async def move(ctx, *, name=''):
+    """Looks up a Dungeon World move."""
+    result = search(moves, 'name', name)
+    if result is None:
+        return await client.say('Move not found.')
+    strict = result[1]
+    results = result[0]
+    if strict:
+        result = results
+    else:
+        if len(results) == 1:
+            result = results[0]
+        else:
+            result = await get_selection(ctx, [(r['name'], r) for r in results])
+            if result is None: return await client.say('Selection timed out or was cancelled.')
+    desc = '\n'.join(result['desc'])
+    source = '\n'.join(result['source'])
+    color = ''.join([random.choice('0123456789ABCDEF') for x in range(6)])
+    color = int(color, 16)
+    embed=discord.Embed(title=result['name'], description=desc, color=discord.Color(value=color))
+    embed.set_footer(text=source)
+    await client.say(embed=embed)
+    #print(name, desc, source)
 
-
-    #cutup = [result['align'][i:i + 2] for i in range(0, len(result['align']), 2)] #x
-    #for l in cutup: #x
-        # each l is a list of the title + body of an alignment
-        #embed.add_field(name=l[0], value=l[1], inline=True) #x
-
-@client.command()
-async def roll(*args):
+@client.command(pass_context=True, name='roll', aliases='r')
+async def roll(ctx, *args):
     """Roll dice in standard notation"""
-
     # expects format to be 2d6 or 2d6+1 or 3d6k2 or 3d6k2+1
     print("ROLL", args)
 
     a = ' '.join(args)
 
     base = re.findall('([0-9]+)d([0-9]+)', a)
-    keep = re.search('(k)([0-9]+)',a)
-    comment = re.search('#(.*.?)+',a)
+    best = re.search('(b)', a)
+    worst = re.search('(w)', a)
+    comment = re.search('#(.*.?)+', a)
 
-    if a.count('+') > 1:
+    if a.count('+') >= 1:
         b,c = a.rsplit("d", 1)
-        modifier = re.search('(\+|\-)([0-9]+)',c)
+        modifier = re.search('(\+|\-)([0-9]+)', c)
+
     else:
         modifier = ""
 
-    print("mod", modifier)
-
     raw_roll = []
-
     result = "Please use standard dice notation, i.e., 2d6 or 2d6+1."
 
     if base:
-        # this is a correctly formatted roll string
         for die_tuple in base:
-            print("count", die_tuple[0])  # count
-            print("sides", die_tuple[1])  # sides
 
             for i in range(int(die_tuple[0])):
                 raw_roll.append(str(random.randint(1,int(die_tuple[1]))))
 
             print("raw", raw_roll)
 
-            if keep:
-                print(keep.group(1))
-                print(keep.group(2))
-                if int(die_tuple[0]) - int(keep.group(2)) >= 1:
-                    r = int(die_tuple[0]) - int(keep.group(2))
-                    print("r", r)
-                    for i in range(r):
-                        raw_roll[i] = "~%s~" % (raw_roll[i])
+            
+            if best:
+                int_roll.sort()
 
-                print("raw", raw_roll)
+            if worst:
+                int_roll.sort(reverse=True)
 
-            # now sum that up (requires stripping and converting to int)
-            math_roll = [int(s) for s in raw_roll if not "~" in s]
+            if best or worst:
+                raw_roll = []
+                for x in int_roll[:-1]:
+                    raw_roll.append("~~%s~~" % (str(x)))
+
+                raw_roll.append("%s" % (str(int_roll[-1])))
+
+                print("pared raw", raw_roll)
+
+            math_roll = [int(s) for s in raw_roll if not "~~" in s]
             print("math", math_roll)
             total = sum(math_roll)
             print("total", total)
@@ -373,41 +427,63 @@ async def roll(*args):
         print(final_total)
 
     if base and modifier:
-        result = "[%s] %s %s = %s" % (' '.join(raw_roll), modifier.group(1), modifier.group(2), final_total)
+        result = "(%s) %s %s = `%s`" % (', '.join(raw_roll), modifier.group(1), modifier.group(2), final_total) # added + cut_roll
     elif base:
-        result = "[%s] = %s" % (' '.join(raw_roll), final_total)
+        result = "(%s) = `%s`" % (', '.join(raw_roll), final_total)
 
     print(result)
 
     if comment:
         result = result + " " + comment.group()
-
-    embed=discord.Embed()
-    embed.title = "Roll Result"
-    embed.description = "Rolling!\n\n" + result
+    embed = EmbedWithAuthor(ctx)
+    embed.title = "Rolling: " + args[0]
+    embed.description = result
     await client.say(embed=embed)
 
-@client.command()
-async def hack(*args):
-    """Rolls Hack and Slash""" # to be rewritten as move with subcommands for all moves
+
+@client.command(pass_context=True, name='moveroll', aliases=['mr'])
+async def moveroll(ctx, name='', *args):
+    """Rolls a move and gives the results"""
+    result = search(rollmoves, 'name', name)
+    if result is None:
+        return await client.say('Move not found.')
+    strict = result[1]
+    results = result[0]
+    if strict:
+        result = results
+    else:
+        if len(results) == 1:
+            result = results[0]
+        else:
+            result = await get_selection(ctx, [(r['name'], r) for r in results])
+            if result is None: return await client.say('Selection timed out or was cancelled.')
+
     try:
         mod = int(args[0])
     except:
         mod = 0
-    try:
-        dmgmod = int(args[1])
-    except:
-        dmgmod = 0
+    #try:
+    #    dmgmod = int(args[1])
+    #except:
+    #    dmgmod = 0
     roll1 = random.randint(1,6)
     roll2 = random.randint(1,6)
-    dmg = random.randint(1,10)
+    #chardmg =
+    #dmg = random.randint(1,10)
     total = (roll1 + roll2 + mod)
-    finalresult = "2d6 (%i, %i) + %i = %i" % (roll1, roll2, mod, roll1 + roll2 + mod)
-    finaldamage = "1d10 (%i) + %i = %i" % (dmg, dmgmod, dmg + dmgmod)
-    result = "On a 10+, you deal your damage to the enemy and avoid their attack. At your option, you may choose to do +1d6 damage but expose yourself to the enemy’s attack." if int(total) >= 10 else "On a 7–9, you deal your damage to the enemy and the enemy makes an attack against you." if 9 >= int(total) >= 7 else "Miss!"
-    embed=discord.Embed(title="Hack and Slash", description="*When you attack an enemy in melee, roll+Str.*" "\n\n**Roll:** " + finalresult + "\n**Damage:** " + finaldamage + "\n", color=0xd6d136)
-    embed.add_field(name="Results:", value=result, inline=False)
-    embed.set_footer(text="Basic Move, 58")
+    finalresult = "2d6 (%i, %i) + %i = %i" % (roll1, roll2, mod, total)
+    #finaldamage = "%i (%i) + %i = %i" % (chardmg, dmg, dmgmod, dmg + dmgmod)
+    desc = '\n'.join(result['desc'])
+    hit = '\n'.join(result['hit'])
+    partial = '\n'.join(result['partial'])
+    miss = '\n'.join(result['miss'])
+    source = '\n'.join(result['source'])
+    results = hit if int(total) >= 10 else partial if 9 >= int(total) >= 7 else miss
+    embed = EmbedWithAuthor(ctx)
+    embed.title = result['name']
+    embed.description = desc + "\n\n**Roll:** " + finalresult + "\n"
+    embed.add_field(name="Results:", value=results, inline=False)
+    embed.set_footer(text=source)
     await client.say(embed=embed)
 
 
@@ -415,41 +491,73 @@ async def hack(*args):
 @client.group(pass_context=True)
 async def help(ctx):
     if ctx.invoked_subcommand is None:
-        embed = EmbedWithAuthor(ctx)
-        embed.title = ""
-        embed.description = "Dire Wolf, a Dungeon World utility bot created by Marcus#3244\nJoin the official support and testing server [here](https://discord.gg/D6DenCC)\nInvite Dire Wolf to your server [here](https://discordapp.com/api/oauth2/authorize?client_id=425813218959556610&permissions=0&redirect_uri=https%3A%2F%2Finvite.direwolf.io%2F&scope=bot)"
+        color = ''.join([random.choice('0123456789ABCDEF') for x in range(6)])
+        color = int(color, 16)
+        embed=discord.Embed(title="", description="Dire Wolf, a Dungeon World utility bot created by Marcus#3244\nJoin the official support and testing server [here](https://discord.gg/D6DenCC)\nInvite Dire Wolf to your server [here](https://discordapp.com/api/oauth2/authorize?client_id=425813218959556610&permissions=0&redirect_uri=https%3A%2F%2Finvite.direwolf.io%2F&scope=bot)", color=discord.Color(value=color))
         embed.add_field(name="\u200b", value="\n__"+" "*200+"__", inline=False)
         embed.add_field(name="Help", value="**help** - Shows this message\n""**help <command>** - Shows syntax and more info for specific commands", inline=False)
         embed.add_field(name="\u200b", value="\n__"+" "*200+"__", inline=False)
-        embed.add_field(name="Lookup", value="**monster** - Looks up a monster\n**spell** - Looks up a spell\n**item** - Looks up an item\n**tag** - Looks up tags\n**playbook** - looks up core playbooks", inline=False)
+        embed.add_field(name="Lookup", value="**monster** - Looks up a monster\n**spell** - Looks up a spell\n**item** - Looks up an item\n**tag** - Looks up tags\n**playbook** - Looks up core playbooks\n**move** - Looks up Basic, Special, and Class moves from the core book.", inline=False)
+        embed.add_field(name="\u200b", value="\n__"+" "*200+"__", inline=False)
+        embed.add_field(name="Rolls", value="**roll** - Rolls dice with standard notation\n**moveroll** - Rolls 2d6+[args] and tells you the results of the move", inline=False)
+        embed.add_field(name="\u200b", value="\n__"+" "*200+"__", inline=False)
+        embed.add_field(name="More Help", value="In specific command help a | indicates there are two commands that will call that function (e.g. `roll|r` mean either 'roll' OR 'r' will work)\nDo not include <> around your args.", inline=False)
         await client.say(embed=embed)
 
-@help.command(pass_context=True)
+@help.command(pass_context=True, name="monster", aliases="m")
 async def monster(ctx):
-    embed = EmbedWithAuthor(ctx)
-    embed.title = "Help"
-    embed.add_field(name=";monster <name>", value="__"+" "*200+"__"+"Looks up a Dungeon World monster.\n\nSearch with environment name for list of monsters found in that environment.\n\n\"Environment List\" for a list of available environments.")
+    color = ''.join([random.choice('0123456789ABCDEF') for x in range(6)])
+    color = int(color, 16)
+    embed=discord.Embed(title=";monster|m <name>", description="\nLooks up a Dungeon World monster.\nSearch with environment name for list of monsters found in that environment.\n\"Environment List\" for a list of available environments.", color=discord.Color(value=color))
     await client.say(embed=embed)
 
-@help.command(pass_context=True)
+@help.command(pass_context=True, name="spell", aliases="s")
 async def spell(ctx):
-    embed = EmbedWithAuthor(ctx)
-    embed.title = "Help"
-    embed.add_field(name=";spell <name>", value="__"+" "*200+"__"+"Looks up a Dungeon World spell.\n\nSearch \"Wizard\" or \"Cleric\" for class spell lists.")
+    color = ''.join([random.choice('0123456789ABCDEF') for x in range(6)])
+    color = int(color, 16)
+    embed=discord.Embed(title=";spell|s <name>", description="Looks up a Dungeon World spell.\nSearch \"Wizard\" or \"Cleric\" for class spell lists.", color=discord.Color(value=color))
     await client.say(embed=embed)
 
-@help.command(pass_context=True)
+@help.command(pass_context=True, name="item", aliases="i")
 async def item(ctx):
-    embed = EmbedWithAuthor(ctx)
-    embed.title = "Help"
-    embed.add_field(name=";item <name>", value="__"+" "*200+"__"+"Looks up a Dungeon World item.\n\nLists by category available by searching \"Weapons\", \"Armor\", etc.\n\nFull list of categories can be viewed by searching \"Item Categories\".")
+    color = ''.join([random.choice('0123456789ABCDEF') for x in range(6)])
+    color = int(color, 16)
+    embed=discord.Embed(title=";item|i <name>", description="Looks up a Dungeon World item.\nLists by category available by searching \"Weapons\", \"Armor\", etc.\nFull list of categories can be viewed by searching \"Item Categories\".", color=discord.Color(value=color))
+    await client.say(embed=embed)
+
+@help.command(pass_context=True, name="tag", aliases="t")
+async def tag(ctx):
+    color = ''.join([random.choice('0123456789ABCDEF') for x in range(6)])
+    color = int(color, 16)
+    embed=discord.Embed(title=";tag|t <name>", description="Looks up a Dungeon World item tag.\nSearch \"Item Tags\" or \"Monster Tags\" to view respective lists.", color=discord.Color(value=color))
+    await client.say(embed=embed)
+
+@help.command(pass_context=True, name="playbook", aliases="p")
+async def playbook(ctx):
+    color = ''.join([random.choice('0123456789ABCDEF') for x in range(6)])
+    color = int(color, 16)
+    embed=discord.Embed(title=";playbook|p <name>", description="Looks up a Dungeon World playbook from the core book (and Barbarian and Immolator).", color=discord.Color(value=color))
     await client.say(embed=embed)
 
 @help.command(pass_context=True)
-async def tag(ctx):
-    embed = EmbedWithAuthor(ctx)
-    embed.title = "Help"
-    embed.add_field(name=";tag <name>", value="__"+" "*200+"__"+"Looks up a Dungeon World item tag.\n\nSearch \"Item Tags\" or \"Monster Tags\" to view respective lists.")
+async def move(ctx):
+    color = ''.join([random.choice('0123456789ABCDEF') for x in range(6)])
+    color = int(color, 16)
+    embed=discord.Embed(title=";move <name>", description="Looks up a Dungeon World Basic, Special, or Class move from the core book (and Barbarian and Immolator).", color=discord.Color(value=color))
+    await client.say(embed=embed)
+
+@help.command(pass_context=True, name="roll", aliases="r")
+async def roll(ctx):
+    color = ''.join([random.choice('0123456789ABCDEF') for x in range(6)])
+    color = int(color, 16)
+    embed=discord.Embed(title=";roll|r <xdy+z>", description="Rolls dice using standard dice notation, i.e., 2d6 or 2d6+1.\nBonuses to rolls can be whole numbers or extra dice, but note that whole numbers must be last.\n\nUsage:\n    ;r 2d6 (basic roll)\n    ;r 2d6+1 (with flat bonus)\n    ;r 2d6+1d8 (with bonus dice)\n    ;r 2d6+1d8+1d4+3 (with bonus dice and flat bonus)\n    ;r b2d12 (`b` rolls all dice and chooses the highest one)\n    ;r w2d4 (`w` rolls all dice and choose the lowest one)", color=discord.Color(value=color))
+    await client.say(embed=embed)
+
+@help.command(pass_context=True, name="moveroll", aliases=['mr'])
+async def moveroll(ctx):
+    color = ''.join([random.choice('0123456789ABCDEF') for x in range(6)])
+    color = int(color, 16)
+    embed=discord.Embed(title=";moveroll|mr <name>", description="Rolls 2d6 and prints the results of the move based on the die roll.\nBonuses can be added to rolls by adding the number after the move name\n\nUsage:\n    ;moveroll discern (roll Discern Realities)\n    ;mr discern 2 (adds a +2 bonus to the roll)", color=discord.Color(value=color))
     await client.say(embed=embed)
 
 client.run('TOKEN')
