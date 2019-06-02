@@ -11,7 +11,7 @@ from funcs import *
 import simplejson
 import re
 
-client = Bot(description="Dire Wolf by Marcus#3244", command_prefix=";", pm_help = False)
+client = Bot(description="Dire Wolf by Marcus#3244", command_prefix="!", pm_help = False)
 
 @client.event
 async def on_ready():
@@ -560,4 +560,4 @@ async def moveroll(ctx):
     embed=discord.Embed(title=";moveroll|mr <name>", description="Rolls 2d6 and prints the results of the move based on the die roll.\nBonuses can be added to rolls by adding the number after the move name\n\nUsage:\n    ;moveroll discern (roll Discern Realities)\n    ;mr discern 2 (adds a +2 bonus to the roll)", color=discord.Color(value=color))
     await client.say(embed=embed)
 
-client.run('TOKEN')
+client.run('NTgzOTMyMTUyMzkyMDU2ODQz.XPPDPg.TG05ULBmUsC8Bd-3XANKSxP_W5w')
